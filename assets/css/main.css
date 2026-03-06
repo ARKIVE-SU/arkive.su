@@ -160,8 +160,8 @@ body > * {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center everything */
-  gap: 4rem; /* Specific gap between logo and links */
+  justify-content: flex-start; /* Bring links closer to logo naturally */
+  gap: 3rem; /* Elegant spacing without being huge */
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
@@ -174,9 +174,9 @@ body > * {
 }
 
 .nav-logo img {
-  height: clamp(48px, 8vh, 80px); /* Responsive height, much larger than before */
+  height: 56px; /* Reduced fixed height to avoid overlap with centered text */
   width: auto;
-  max-width: 250px;
+  max-width: 220px;
   display: block;
 }
 
@@ -225,6 +225,7 @@ body > * {
   background: none;
   border: none;
   padding: 4px;
+  margin-left: auto; /* Always push toggle to far right on mobile */
 }
 
 .nav-toggle span {
@@ -853,8 +854,14 @@ body > * {
   }
 
   .nav {
+    justify-content: space-between;
     gap: 1rem;
     padding: 0 1.25rem;
+  }
+
+  .nav-logo img {
+    height: 40px; /* Mini logo for mobile screens */
+    max-width: 180px;
   }
 }
 
