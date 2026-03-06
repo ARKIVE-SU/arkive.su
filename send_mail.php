@@ -1,30 +1,37 @@
 <?php
 // send_mail.php
+// Uses PHPMailer for reliable SMTP delivery
 
-// Настройки почты
-$to = 'hello@arkive.su'; // Ваша новая почта
-$subject_prefix = '[ARKIVE.SU] ';
+// Check config file exists
+if (!file_exists(__DIR__ . '/mail_config.php')) {
+    die("Error: mail_config.php is missing. Please create it using mail_config.example.php");
+}
 
-// Проверяем, что запрос пришел методом POST
+require_once __DIR__ . '/mail_config.php';
+
+// Include PHPMailer manually
+require_once __DIR__ . '/lib/PHPMailer/src/Exception.php';
+require_once __DIR__ . '/lib/PHPMailer/src/PHPMailer.php';
+require_once __DIR__ . '/lib/PHPMailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Only process POST requests
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // Получаем тип формы (contact, newsletter, eoi)
     $form_type = isset($_POST['form_type']) ? htmlspecialchars(trim($_POST['form_type'])) : 'unknown';
-
     $message_body = "";
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: notice@arkive.su" . "\r\n"; // Отправитель (заглушка)
-
-    // Обработка формы контактов
+    $reply_to = "";
+    
+    // Process "Contact" form
     if ($form_type === 'contact') {
         $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : 'Не указано';
         $email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : 'Не указано';
         $subject = isset($_POST['subject']) && !empty(trim($_POST['subject'])) ? htmlspecialchars(trim($_POST['subject'])) : 'Новое сообщение с сайта';
         $message = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : 'Нет текста сообщения';
 
-        $mail_subject = $subject_prefix . "Сообщение от " . $name . " - " . $subject;
-        
+        $mail_subject = "[ARKIVE.SU] Сообщение от " . $name . " - " . $subject;
         $message_body = "
         <h2>Новое сообщение с формы контактов ARKIVE.SU</h2>
         <p><strong>Имя:</strong> {$name}</p>
@@ -32,24 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Тема:</strong> {$subject}</p>
         <p><strong>Сообщение:</strong><br/>" . nl2br($message) . "</p>
         ";
-        
-        $headers .= "Reply-To: {$email}" . "\r\n";
+        $reply_to = $email;
     } 
-    // Обработка подписки на новости
+    // Process "Newsletter" form
     elseif ($form_type === 'newsletter') {
         $email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : 'Не указано';
         
-        $mail_subject = $subject_prefix . "Новая подписка на новости";
-        
+        $mail_subject = "[ARKIVE.SU] Новая подписка на новости";
         $message_body = "
         <h2>Новый подписчик ARKIVE.SU</h2>
         <p>Пользователь оставил email для подписки на новости.</p>
         <p><strong>Email:</strong> {$email}</p>
         ";
-        
-        $headers .= "Reply-To: {$email}" . "\r\n";
+        $reply_to = $email;
     }
-    // Обработка Expression of Interest
+    // Process "Expression of Interest" form
     elseif ($form_type === 'eoi') {
         $org_name = isset($_POST['organization']) ? htmlspecialchars(trim($_POST['organization'])) : 'Не указано';
         $type = isset($_POST['type']) ? htmlspecialchars(trim($_POST['type'])) : 'Не указано';
@@ -57,8 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : 'Не указано';
         $description = isset($_POST['description']) ? htmlspecialchars(trim($_POST['description'])) : 'Нет описания';
         
-        $mail_subject = $subject_prefix . "Expression of Interest: " . $org_name;
-        
+        $mail_subject = "[ARKIVE.SU] Expression of Interest: " . $org_name;
         $message_body = "
         <h2>Новая заявка на участие (Expression of Interest)</h2>
         <p><strong>Организация:</strong> {$org_name}</p>
@@ -67,28 +70,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><strong>Email:</strong> {$email}</p>
         <p><strong>Предложение/Описание:</strong><br/>" . nl2br($description) . "</p>
         ";
-        
-        $headers .= "Reply-To: {$email}" . "\r\n";
+        $reply_to = $email;
     } else {
         die("Invalid form submission.");
     }
 
-    // Отправляем письмо
-    if(mail($to, $mail_subject, $message_body, $headers)) {
-        // Успешная отправка: перенаправляем обратно с параметром успеха
+    // Configure PHPMailer
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host       = $mail_config['host'];
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $mail_config['username'];
+        $mail->Password   = $mail_config['password'];
+        $mail->SMTPSecure = $mail_config['encryption'];
+        $mail->Port       = $mail_config['port'];
+        $mail->CharSet    = 'UTF-8';
+
+        // Recipients
+        $mail->setFrom($mail_config['from_email'], $mail_config['from_name']);
+        $mail->addAddress($mail_config['recipient']); // Send to the admin
+
+        if (!empty($reply_to)) {
+            $mail->addReplyTo($reply_to);
+        }
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = $mail_subject;
+        $mail->Body    = $mail_body ?? $message_body;
+
+        $mail->send();
+        
+        // Success redirect
         $referer = $_SERVER['HTTP_REFERER'];
         $redirect_url = strtok($referer, '?') . "?status=success";
         header("Location: " . $redirect_url);
         exit();
-    } else {
-        // Ошибка отправки
+        
+    } catch (Exception $e) {
+        // Error redirect
+        // Uncomment the line below for debugging email issues:
+        // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; exit;
+        
         $referer = $_SERVER['HTTP_REFERER'];
         $redirect_url = strtok($referer, '?') . "?status=error";
         header("Location: " . $redirect_url);
         exit();
     }
 } else {
-    // Если зашли напрямую на скрипт
+    // Block direct access
     header("Location: index.html");
     exit();
 }
