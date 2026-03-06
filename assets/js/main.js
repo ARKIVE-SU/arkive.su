@@ -4,22 +4,29 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* --- Mobile Nav Toggle --- */
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-    // Close on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+  /* --- Event Delegation for Mobile Nav & Header --- */
+  document.body.addEventListener('click', (e) => {
+    // Mobile Nav Toggle
+    const toggle = e.target.closest('.nav-toggle');
+    if (toggle) {
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks) {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      }
+      return;
+    }
+
+    // Close mobile nav on link click
+    if (e.target.closest('.nav-links a')) {
+      const navLinks = document.querySelector('.nav-links');
+      const toggleBtn = document.querySelector('.nav-toggle');
+      if (navLinks && toggleBtn) {
         navLinks.classList.remove('open');
-        toggle.classList.remove('open');
-      });
-    });
-  }
+        toggleBtn.classList.remove('open');
+      }
+    }
+  });
 
   /* --- Header scroll effect --- */
   const header = document.querySelector('.header');

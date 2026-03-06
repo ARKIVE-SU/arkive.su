@@ -44,6 +44,7 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: 80px; /* Crucial: Prevents fixed header from overlapping content */
 }
 
 a {
@@ -238,12 +239,12 @@ body > * {
 
 /* --- Hero Section --- */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Adjust for body padding */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 2rem 4rem;
+  padding: 4rem 2rem;
   background:
     radial-gradient(ellipse at 50% 0%, rgba(96, 165, 250, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 50% 100%, rgba(212, 168, 83, 0.05) 0%, transparent 50%);
@@ -633,7 +634,7 @@ body > * {
 
 /* --- Page Header (inner pages) --- */
 .page-header {
-  padding: 8rem 0 3rem;
+  padding: 4rem 0 3rem; /* Adjusted for body top padding */
   text-align: center;
   background:
     radial-gradient(ellipse at 50% 0%, rgba(96, 165, 250, 0.06) 0%, transparent 60%);
@@ -803,10 +804,14 @@ body > * {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(10, 14, 26, 0.97);
+    background: rgba(9, 10, 15, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 1.5rem 2rem;
     gap: 1rem;
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 999;
   }
 
   .nav-links.open {
