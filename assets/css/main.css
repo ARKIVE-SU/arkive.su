@@ -129,6 +129,11 @@ body > * {
   z-index: 1;
 }
 
+#site-header {
+  position: relative;
+  z-index: 1000;
+}
+
 /* --- Header / Navigation --- */
 .header {
   position: fixed;

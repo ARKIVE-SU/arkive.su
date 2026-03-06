@@ -28,7 +28,8 @@
       <!-- Contact Form -->
       <div>
         <h2>Send a Message</h2>
-        <form id="contact-form" style="margin-top:1.5rem;">
+        <form action="send_mail.php" method="POST" id="contact-form" style="margin-top:1.5rem;">
+          <input type="hidden" name="form_type" value="contact">
           <div class="form-group">
             <label for="contact-name">Name</label>
             <input type="text" id="contact-name" name="name" class="form-input" required>
@@ -54,15 +55,16 @@
         <h2>Other Ways to Reach Us</h2>
         <div style="margin-top:1.5rem;">
           <h4 style="color:var(--accent-gold); margin-bottom:0.5rem;">Email</h4>
-          <p><a href="mailto:sitty.relise@gmail.com">sitty.relise@gmail.com</a></p>
+          <p><a href="mailto:hello@arkive.su">hello@arkive.su</a></p>
 
           <h4 style="color:var(--accent-gold); margin-top:2rem; margin-bottom:0.5rem;">Expression of Interest</h4>
           <p>Ready to join the network? <a href="participate.html#eoi-form">Submit your expression of interest</a>.</p>
 
           <h4 style="color:var(--accent-gold); margin-top:2rem; margin-bottom:0.5rem;">Newsletter</h4>
           <p>Stay updated on the initiative's progress.</p>
-          <form class="newsletter-form" style="margin-top:1rem; max-width:100%;">
-            <input type="email" class="form-input" placeholder="your@email.com" required>
+          <form action="send_mail.php" method="POST" class="newsletter-form" style="margin-top:1rem; max-width:100%;">
+            <input type="hidden" name="form_type" value="newsletter">
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
             <button type="submit" class="btn btn-primary">Subscribe</button>
           </form>
         </div>

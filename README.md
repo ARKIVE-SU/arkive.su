@@ -35,6 +35,7 @@ Multi-redundancy across media types, geographic locations, and formats — analo
 ├── faq.html                Frequently asked questions
 ├── news.html               News feed (from JSON index)
 ├── contact.html            Contact form & info
+├── send_mail.php           PHP script for handling form submissions
 ├── articles/
 │   ├── index.json          Article index (add entry → appears in feed)
 │   ├── TEMPLATE.html       Template for new articles
@@ -68,6 +69,9 @@ git clone https://github.com/ARKIVE-SU/arkive.su.git /var/www/arkive.su
 # Update
 cd /var/www/arkive.su && git pull
 ```
+
+**Forms and Email**
+The project uses `send_mail.php` to handle form submissions (contact form, newsletter, Expression of Interest). Form data is sent to `hello@arkive.su`. **Note:** For the forms to work, your server must have PHP installed and configured to send email (e.g., via `sendmail` or an SMTP relay).
 
 ## Contributing
 

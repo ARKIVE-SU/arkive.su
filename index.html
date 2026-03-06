@@ -119,8 +119,9 @@
   <div class="container" style="text-align:center">
     <h2 class="section-title">Stay Updated</h2>
     <p>Follow the initiative's progress. No spam — only meaningful milestones.</p>
-    <form class="newsletter-form">
-      <input type="email" class="form-input" placeholder="your@email.com" required>
+    <form action="send_mail.php" method="POST" class="newsletter-form">
+      <input type="hidden" name="form_type" value="newsletter">
+      <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
       <button type="submit" class="btn btn-primary">Subscribe</button>
     </form>
   </div>
