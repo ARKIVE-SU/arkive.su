@@ -42,10 +42,24 @@ Multi-redundancy across media types, geographic locations, and formats — analo
 │   └── *.html              Individual articles
 └── assets/
     ├── css/main.css        Dark cosmic theme
+    ├── locales/            JSON language dictionaries (en, ru, es, zh, ar)
     └── js/
         ├── components.js   Shared header & footer
+        ├── i18n.js         Client-side translation engine
         └── main.js         Navigation, FAQ accordion, forms
 ```
+
+## Internationalisation (i18n)
+
+The website uses a custom, lightweight, pure-JavaScript translation engine (`assets/js/i18n.js`).
+It relies on JSON dictionaries located in `assets/locales/`.
+
+**To add a new language or edit text:**
+1. Open the relevant file in `assets/locales/` (e.g. `en.json`).
+2. Update the values next to the keys.
+3. If adding a completely new language (e.g. `fr.json`), add it to the `SUPPORTED_LANGS` array in `i18n.js` and add an `<option>` to the `#lang-selector` in `components.js`.
+
+The site automatically detects the user's browser language on their first visit, saves the preference to `localStorage`, and instantly updates the DOM via JavaScript without reloading the page. It fully supports Right-to-Left (RTL) layouts for Arabic.
 
 ## Adding an Article
 

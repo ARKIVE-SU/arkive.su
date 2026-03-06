@@ -16,8 +16,8 @@
 
 <section class="page-header">
   <div class="container">
-    <h1>Network Members</h1>
-    <p>A growing coalition of institutions, technologists, and infrastructure providers committed to permanent knowledge preservation.</p>
+    <h1 data-i18n="network_page.title">Network Members</h1>
+    <p data-i18n="network_page.subtitle">A growing coalition of institutions, technologists, and infrastructure providers committed to permanent knowledge preservation.</p>
   </div>
 </section>
 
@@ -28,48 +28,48 @@
     <div class="stats" style="margin-bottom:3rem;">
       <div class="stat-item">
         <span class="stat-number">200+</span>
-        <span class="stat-label">Institutions Contacted</span>
+        <span class="stat-label" data-i18n="network_page.stats_institutions">Institutions Contacted</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">4</span>
-        <span class="stat-label">Categories</span>
+        <span class="stat-label" data-i18n="network_page.stats_categories">Categories</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">6</span>
-        <span class="stat-label">Continents</span>
+        <span class="stat-label" data-i18n="network_page.stats_continents">Continents</span>
       </div>
     </div>
 
     <!-- Category overview -->
-    <h2 class="section-title">Participant Categories</h2>
+    <h2 class="section-title" data-i18n="network_page.cat_title">Participant Categories</h2>
     <div class="grid-2" style="margin-bottom:3rem">
       <div class="card">
-        <span class="card-badge badge-knowledge">Knowledge Holders</span>
-        <h3>Libraries, Archives &amp; Repositories</h3>
-        <p>National libraries, internet archives, artistic museums, video archives, and digital repositories providing curatorial expertise and access to collections.</p>
+        <span class="card-badge badge-knowledge" data-i18n="network_page.cat_knowledge_badge">Knowledge Holders</span>
+        <h3 data-i18n="network_page.cat_knowledge_title">Libraries, Archives &amp; Repositories</h3>
+        <p data-i18n="network_page.cat_knowledge_desc">National libraries, internet archives, artistic museums, video archives, and digital repositories providing curatorial expertise and access to collections.</p>
       </div>
       <div class="card">
-        <span class="card-badge badge-storage">Storage Technology</span>
-        <h3>Ultra-Durable Media Developers</h3>
-        <p>Creators of storage technologies designed to outlast civilisations — ceramic, crystal, and emerging formats.</p>
+        <span class="card-badge badge-storage" data-i18n="network_page.cat_tech_badge">Storage Technology</span>
+        <h3 data-i18n="network_page.cat_tech_title">Ultra-Durable Media Developers</h3>
+        <p data-i18n="network_page.cat_tech_desc">Creators of storage technologies designed to outlast civilisations — ceramic, crystal, and emerging formats.</p>
       </div>
       <div class="card">
-        <span class="card-badge badge-space">Space &amp; Infrastructure</span>
-        <h3>Placement &amp; Logistics</h3>
-        <p>Operators of space missions, hardened bunkers, salt mine vaults, and other long-duration physical storage facilities.</p>
+        <span class="card-badge badge-space" data-i18n="network_page.cat_space_badge">Space &amp; Infrastructure</span>
+        <h3 data-i18n="network_page.cat_space_title">Placement &amp; Logistics</h3>
+        <p data-i18n="network_page.cat_space_desc">Operators of space missions, hardened bunkers, salt mine vaults, and other long-duration physical storage facilities.</p>
       </div>
       <div class="card">
-        <span class="card-badge badge-digital">Digital Preservation</span>
-        <h3>Digital Platforms &amp; Initiatives</h3>
-        <p>Existing digital preservation projects and platforms that form the knowledge pipeline.</p>
+        <span class="card-badge badge-digital" data-i18n="network_page.cat_digital_badge">Digital Preservation</span>
+        <h3 data-i18n="network_page.cat_digital_title">Digital Platforms &amp; Initiatives</h3>
+        <p data-i18n="network_page.cat_digital_desc">Existing digital preservation projects and platforms that form the knowledge pipeline.</p>
       </div>
     </div>
 
     <!-- Placeholder for individual member cards -->
     <div style="text-align:center; padding:3rem; border:1px dashed var(--border-light); border-radius:8px;">
-      <h3 style="color:var(--text-muted); margin-bottom:1rem;">Individual Member Profiles</h3>
-      <p>Member profiles will be published here as permissions are confirmed. Each organisation controls how they are represented in the directory.</p>
-      <a href="participate.html" class="btn btn-outline" style="margin-top:1rem;">Join the Network</a>
+      <h3 style="color:var(--text-muted); margin-bottom:1rem;" data-i18n="network_page.placeholder_title">Individual Member Profiles</h3>
+      <p data-i18n="network_page.placeholder_desc">Member profiles will be published here as permissions are confirmed. Each organisation controls how they are represented in the directory.</p>
+      <a href="participate.html" class="btn btn-outline" style="margin-top:1rem;" data-i18n="network_page.btn_join">Join the Network</a>
     </div>
 
   </div>
@@ -77,6 +77,7 @@
 
 <div id="site-footer"></div>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/components.js"></script>
 <script>renderHeader('network'); renderFooter();</script>
 <script src="assets/js/main.js"></script>
