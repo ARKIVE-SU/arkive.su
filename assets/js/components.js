@@ -9,7 +9,7 @@ function renderHeader(activePage) {
   <header class="header">
     <nav class="nav">
       <a href="index.html" class="nav-logo">
-        <img src="assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" style="height: 48px; width: auto; display: block;" id="site-logo">
+        <img src="assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
       </a>
       <ul class="nav-links">
         <li><a href="index.html" ${activePage === 'home' ? 'class="active"' : ''}>Home</a></li>
