@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — Knowledge Ark</title>
+  <meta name="description" content="Latest updates from the Knowledge Ark Initiative.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-header">
+  <div class="container">
+    <h1>News &amp; Updates</h1>
+    <p>Follow the progress of the Knowledge Ark Initiative.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+    <ul class="article-list" id="news-list">
+      <!-- Articles loaded from articles/index.json -->
+    </ul>
+    <noscript>
+      <ul class="article-list">
+        <li class="article-item">
+          <span class="article-date">2026-03-06</span>
+          <div>
+            <a href="articles/technology-partnerships-forming.html" class="article-title">Technology partnerships forming — ceramic, crystal, and lunar storage</a>
+            <p class="article-excerpt">Conversations with Cerabyte, SPhotonix, and Lonestar Data Holdings establish the technological foundation for permanent knowledge preservation.</p>
+          </div>
+        </li>
+        <li class="article-item">
+          <span class="article-date">2026-03-04</span>
+          <div>
+            <a href="articles/first-institutional-responses.html" class="article-title">First institutional responses received across 4 continents</a>
+            <p class="article-excerpt">Libraries, archives, and digital preservation organisations from Europe, Asia, South America, and Africa respond to the initiative.</p>
+          </div>
+        </li>
+        <li class="article-item">
+          <span class="article-date">2026-03-01</span>
+          <div>
+            <a href="articles/initiative-launched.html" class="article-title">Initiative launched — outreach begins to 200+ institutions worldwide</a>
+            <p class="article-excerpt">The Knowledge Ark Initiative begins its global outreach campaign, contacting over 200 institutions across 6 continents.</p>
+          </div>
+        </li>
+      </ul>
+    </noscript>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/components.js"></script>
+<script>renderHeader('news'); renderFooter();</script>
+<script>
+// Load articles from JSON index
+fetch('articles/index.json')
+  .then(r => r.json())
+  .then(articles => {
+    const list = document.getElementById('news-list');
+    if (!list || !articles.length) return;
+    list.innerHTML = articles
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map(a => `
+        <li class="article-item">
+          <span class="article-date">${a.date}</span>
+          <div>
+            <a href="articles/${a.file}" class="article-title">${a.title}</a>
+            <p class="article-excerpt">${a.excerpt}</p>
+          </div>
+        </li>
+      `).join('');
+  })
+  .catch(() => {}); // noscript fallback handles this
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

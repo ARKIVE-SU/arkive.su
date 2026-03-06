@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Partnerships Forming — Knowledge Ark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="section">
+  <div class="container article-content">
+    <p class="article-meta"><a href="../news.html">&larr; All News</a> &middot; March 6, 2026</p>
+    <h1>Technology partnerships forming — ceramic, crystal, and lunar storage</h1>
+
+    <p>The Knowledge Ark Initiative has established initial contact with three pioneering storage technology companies, each representing a different approach to permanent data preservation.</p>
+
+    <h2>Ceramic Storage</h2>
+    <p>Cerabyte, based in Munich, Germany, develops ceramic data carriers using femtosecond laser writing. Their technology requires no power in its dormant state and is projected to last over 5,000 years. The company is connected to the Memory of Mankind project — an analogue archive on ceramic tablets stored deep inside the world's oldest salt mine in the Austrian Alps.</p>
+
+    <h2>5D Crystal Storage</h2>
+    <p>SPhotonix, a UK-based company spun out of the University of Southampton, creates 5D memory crystals — optical storage in fused quartz with a potential lifespan measured in billions of years. Their technology represents perhaps the most durable data storage medium ever developed.</p>
+
+    <h2>Lunar Data Storage</h2>
+    <p>Lonestar Data Holdings, based in Florida, operates commercial data centres on the Moon. Having already completed successful data storage tests on the lunar surface, they represent the ultimate form of geographic redundancy — physically removing preserved knowledge from all terrestrial risks.</p>
+
+    <p>Together, these three technologies embody the Knowledge Ark's principle of multi-redundancy: multiple media types, multiple failure modes, maximum resilience.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/components.js"></script>
+<script>
+  renderHeader('news');
+  renderFooter();
+  document.querySelectorAll('.nav-links a, .footer a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('../') && !href.startsWith('#')) {
+      a.setAttribute('href', '../' + href);
+    }
+  });
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

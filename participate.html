@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participate — Knowledge Ark</title>
+  <meta name="description" content="Join the Knowledge Ark network. Three ways to participate: as a curatorial node, technology partner, or infrastructure partner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-header">
+  <div class="container">
+    <h1>How to Participate</h1>
+    <p>No financial commitment. No immediate obligations. Just a shared belief that knowledge should outlast us all.</p>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Three Ways to Contribute</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="color:var(--accent-blue)">&#128218; Curatorial Node</h3>
+        <p><strong>For:</strong> Libraries, archives, museums, digital repositories</p>
+        <h4 style="margin-top:1rem">What you provide</h4>
+        <p>Curatorial expertise and access to collections. You select what matters most.</p>
+        <h4>What you receive</h4>
+        <p>Your collections preserved on the most durable media ever created. Visibility in an international network of preservation institutions.</p>
+        <h4>Commitment</h4>
+        <p>None financial. Only interest and willingness to engage in dialogue.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--accent-gold)">&#128302; Technology Partner</h3>
+        <p><strong>For:</strong> Developers of ultra-durable storage media</p>
+        <h4 style="margin-top:1rem">What you provide</h4>
+        <p>Storage technology and technical expertise. Capacity allocation for encoding.</p>
+        <h4>What you receive</h4>
+        <p>Direct access to the world's largest archival institutions. Real-world use cases for your technology.</p>
+        <h4>Commitment</h4>
+        <p>Technical collaboration. No financial obligations.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--accent-ice)">&#128640; Infrastructure Partner</h3>
+        <p><strong>For:</strong> Space companies, bunker operators, vault facilities</p>
+        <h4 style="margin-top:1rem">What you provide</h4>
+        <p>Physical space and logistics for long-term placement of preserved media.</p>
+        <h4>What you receive</h4>
+        <p>Participation in a landmark project. PR visibility. A network of leading institutions and technology developers.</p>
+        <h4>Commitment</h4>
+        <p>Space/payload allocation. No financial obligations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI Form -->
+<section class="section" style="background: var(--bg-secondary)" id="eoi-form">
+  <div class="container" style="max-width:640px">
+    <h2 class="section-title">Expression of Interest</h2>
+    <p style="text-align:center; margin-bottom:2rem;">A simple "we are open to the idea" is exactly what we need at this stage. Every expression of interest strengthens the case for the entire network.</p>
+
+    <form id="eoi-form">
+      <div class="form-group">
+        <label for="org-name">Organisation Name</label>
+        <input type="text" id="org-name" name="organization" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="org-type">Type</label>
+        <select id="org-type" name="type" class="form-select" required>
+          <option value="" disabled selected>Select type...</option>
+          <option value="library">Library / Archive</option>
+          <option value="technology">Technology Developer</option>
+          <option value="infrastructure">Infrastructure Provider</option>
+          <option value="digital">Digital Platform</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">What can you offer or how would you like to participate?</label>
+        <textarea id="description" name="description" class="form-textarea" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%">Submit Expression of Interest</button>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/components.js"></script>
+<script>renderHeader('participate'); renderFooter();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
