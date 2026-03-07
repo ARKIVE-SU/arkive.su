@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Ark — Preserving Humanity&#39;s Knowledge for Eternity</title>
+  <meta name="description" content="A decentralised initiative to preserve humanity&#39;s most important knowledge across multiple storage media and locations — on Earth and in space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="/zh/" class="nav-logo">
+      <img src="/assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/zh/" class="">首页</a></li>
+      <li><a href="/zh/mission/" class="">使命</a></li>
+      <li><a href="/zh/technologies/" class="">技术</a></li>
+      <li><a href="/zh/network/" class="">网络</a></li>
+      <li><a href="/zh/participate/" class="active">参与</a></li>
+      <li><a href="/zh/faq/" class="">常见问题</a></li>
+      <li><a href="/zh/contact/" class="">联系我们</a></li>
+    </ul>
+    
+    <div class="lang-switcher">
+      <select id="lang-selector" class="lang-select" onchange="window.location.href=this.value">
+        <option value="/en/participate/" >En</option>
+        <option value="/ru/participate/" >Ru</option>
+        <option value="/es/participate/" >Es</option>
+        <option value="/zh/participate/" selected>Zh</option>
+        <option value="/ar/participate/" >Ar</option>
+      </select>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >如何参与</h1>
+    <p >没有财务承诺。没有眼前的义务。只有共同的信念，即知识应该比我们所有人存在得更久远。</p>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" >三种贡献方式</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 >策展节点</h3>
+        <p ><strong>对象：</strong> 图书馆、档案馆、博物馆、数字存储库</p>
+        <h4 style="margin-top:1rem" >您提供</h4>
+        <p >策展专业知识和获取藏品的途径。您要挑选最重要的内容。</p>
+        <h4 >您获得</h4>
+        <p >您的藏品将被保存在有史以来最耐用的介质上。在国际保存机构网络中的知名度。</p>
+        <h4 >义务</h4>
+        <p >没有财务义务。只有兴趣和参与对话的意愿。</p>
+      </div>
+
+      <div class="card">
+        <h3 >技术合作伙伴</h3>
+        <p ><strong>对象：</strong> 超耐用存储介质的开发人员</p>
+        <h4 style="margin-top:1rem" >您提供</h4>
+        <p >存储技术和技术专长。用于编码的容量分配。</p>
+        <h4 >您获得</h4>
+        <p >直接接触世界上最大的档案机构。您的技术的真实用例。</p>
+        <h4 >义务</h4>
+        <p >技术合作。没有财务义务。</p>
+      </div>
+
+      <div class="card">
+        <h3 >基础设施合作伙伴</h3>
+        <p ><strong>对象：</strong> 航天公司、避难所运营商、金库设施</p>
+        <h4 style="margin-top:1rem" >您提供</h4>
+        <p >为保存的介质长期放置提供物理空间和物流支持。</p>
+        <h4 >您获得</h4>
+        <p >参与到一个具有里程碑意义的项目中。公关知名度。由领先的机构和技术开发人员组成的网络。</p>
+        <h4 >义务</h4>
+        <p >空间/有效载荷分配。没有财务义务。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI Form -->
+<section class="section" style="background: var(--bg-secondary)" id="eoi-form">
+  <div class="container" style="max-width:640px">
+    <h2 class="section-title" >合作意向</h2>
+    <p style="text-align:center; margin-bottom:2rem;" >在这个阶段，简单的“我们对这个想法持开放态度”正是我们所需要的。每一种意向表达都在加强整个网络的论点。</p>
+
+    <form action="send_mail.php" method="POST" id="eoi-form">
+      <input type="hidden" name="form_type" value="eoi">
+      <div class="form-group">
+        <label for="org-name" >组织机构名称</label>
+        <input type="text" id="org-name" name="organization" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="org-type" >分类</label>
+        <select id="org-type" name="type" class="form-select" required>
+          <option value="" disabled selected >选择分类...</option>
+          <option value="library" >图书馆 / 档案馆</option>
+          <option value="technology" >技术开发人员</option>
+          <option value="infrastructure" >基础设施提供商</option>
+          <option value="digital" >数字平台</option>
+          <option value="other" >其他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country" >国家</label>
+        <input type="text" id="country" name="country" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" >电子邮件</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description" >您能提供什么，或者您想如何参与？</label>
+        <textarea id="description" name="description" class="form-textarea" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%" >提交合作意向</button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0.5rem"><span>&#9670;</span> Knowledge Ark</div>
+        <p>一项去中心化的计划，致力于在地球和太空的多个存储介质和位置上保存人类最重要的知识。</p>
+      </div>
+      <div>
+        <h4>导航</h4>
+        <ul class="footer-links">
+          <li><a href="/zh/mission/">使命</a></li>
+          <li><a href="/zh/technologies/">技术</a></li>
+          <li><a href="/zh/participate/">参与</a></li>
+          <li><a href="/zh/faq/">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul class="footer-links">
+          <li><a href="/zh/contact/">联系我们</a></li>
+          <li><a href="/zh/news/">新闻</a></li>
+          <li><a href="/zh/participate/#eoi-form">意向表达</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Knowledge Ark 计划。非商业、开放、去中心化。
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

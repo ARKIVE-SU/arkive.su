@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Initiative Launched — Knowledge Ark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="section">
+  <div class="container article-content">
+    <p class="article-meta"><a href="../news.html">&larr; All News</a> &middot; March 1, 2026</p>
+    <h1>Initiative launched — outreach begins to 200+ institutions worldwide</h1>
+
+    <p>The Knowledge Ark Initiative has officially begun its global outreach campaign. Over 200 institutions across 6 continents have been contacted — including national libraries, internet archives, digital preservation platforms, university repositories, and cultural heritage organisations.</p>
+
+    <p>The initiative operates as a decentralised coordination network, connecting three types of participants who rarely interact: knowledge holders (libraries and archives), storage technology developers (ceramic and crystal media), and infrastructure providers (space missions and bunker operators).</p>
+
+    <p>At this stage, the campaign is focused on interest-mapping — identifying institutions willing to participate in a dialogue about long-term knowledge preservation. No financial commitments are requested.</p>
+
+    <blockquote>
+      <p>Every previous civilisation believed its knowledge was safe — until libraries burned and media degraded. We are the first generation with the technical means to break this cycle forever.</p>
+    </blockquote>
+
+    <p>Updates will be posted as responses are received and partnerships form.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/components.js"></script>
+<script>
+  // Adjust paths for subdirectory
+  renderHeader('news');
+  renderFooter();
+  // Fix nav links for subdirectory
+  document.querySelectorAll('.nav-links a, .footer a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('../') && !href.startsWith('#')) {
+      a.setAttribute('href', '../' + href);
+    }
+  });
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

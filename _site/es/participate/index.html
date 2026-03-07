@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Ark — Preserving Humanity&#39;s Knowledge for Eternity</title>
+  <meta name="description" content="A decentralised initiative to preserve humanity&#39;s most important knowledge across multiple storage media and locations — on Earth and in space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="/es/" class="nav-logo">
+      <img src="/assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/es/" class="">Inicio</a></li>
+      <li><a href="/es/mission/" class="">Misión</a></li>
+      <li><a href="/es/technologies/" class="">Tecnologías</a></li>
+      <li><a href="/es/network/" class="">Red</a></li>
+      <li><a href="/es/participate/" class="active">Participar</a></li>
+      <li><a href="/es/faq/" class="">Preguntas Frecuentes</a></li>
+      <li><a href="/es/contact/" class="">Contacto</a></li>
+    </ul>
+    
+    <div class="lang-switcher">
+      <select id="lang-selector" class="lang-select" onchange="window.location.href=this.value">
+        <option value="/en/participate/" >En</option>
+        <option value="/ru/participate/" >Ru</option>
+        <option value="/es/participate/" selected>Es</option>
+        <option value="/zh/participate/" >Zh</option>
+        <option value="/ar/participate/" >Ar</option>
+      </select>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >Cómo Participar</h1>
+    <p >Sin compromiso financiero. Sin obligaciones inmediatas. Solo una creencia compartida de que el conocimiento debe sobrevivirnos a todos.</p>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" >Tres Formas de Contribuir</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 >Nodo Curatorial</h3>
+        <p ><strong>Para:</strong> Bibliotecas, archivos, museos, repositorios digitales</p>
+        <h4 style="margin-top:1rem" >Lo que usted proporciona</h4>
+        <p >Experiencia curatorial y acceso a colecciones. Usted selecciona lo que más importa.</p>
+        <h4 >Lo que usted recibe</h4>
+        <p >Sus colecciones preservadas en los medios más duraderos jamás creados. Visibilidad en una red internacional de instituciones de preservación.</p>
+        <h4 >Compromiso</h4>
+        <p >Ninguno financiero. Solo interés y voluntad de entablar un diálogo.</p>
+      </div>
+
+      <div class="card">
+        <h3 >Socio Tecnológico</h3>
+        <p ><strong>Para:</strong> Desarrolladores de medios de almacenamiento ultraduraderos</p>
+        <h4 style="margin-top:1rem" >Lo que usted proporciona</h4>
+        <p >Tecnología de almacenamiento y experiencia técnica. Asignación de capacidad para la codificación.</p>
+        <h4 >Lo que usted recibe</h4>
+        <p >Acceso directo a las instituciones de archivo más grandes del mundo. Casos de uso del mundo real para su tecnología.</p>
+        <h4 >Compromiso</h4>
+        <p >Colaboración técnica. Sin obligaciones financieras.</p>
+      </div>
+
+      <div class="card">
+        <h3 >Socio de Infraestructura</h3>
+        <p ><strong>Para:</strong> Compañías espaciales, operadores de búnkeres, instalaciones de bóvedas</p>
+        <h4 style="margin-top:1rem" >Lo que usted proporciona</h4>
+        <p >Espacio físico y logística para la ubicación a largo plazo de los medios preservados.</p>
+        <h4 >Lo que usted recibe</h4>
+        <p >Participación en un proyecto histórico. Visibilidad de relaciones públicas. Una red de instituciones líderes y desarrolladores de tecnología.</p>
+        <h4 >Compromiso</h4>
+        <p >Asignación de espacio/carga útil. Sin obligaciones financieras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI Form -->
+<section class="section" style="background: var(--bg-secondary)" id="eoi-form">
+  <div class="container" style="max-width:640px">
+    <h2 class="section-title" >Expresión de Interés</h2>
+    <p style="text-align:center; margin-bottom:2rem;" >Un simple "estamos abiertos a la idea" es exactamente lo que necesitamos en esta etapa. Cada expresión de interés fortalece el caso de toda la red.</p>
+
+    <form action="send_mail.php" method="POST" id="eoi-form">
+      <input type="hidden" name="form_type" value="eoi">
+      <div class="form-group">
+        <label for="org-name" >Nombre de la Organización</label>
+        <input type="text" id="org-name" name="organization" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="org-type" >Tipo</label>
+        <select id="org-type" name="type" class="form-select" required>
+          <option value="" disabled selected >Seleccione el tipo...</option>
+          <option value="library" >Biblioteca / Archivo</option>
+          <option value="technology" >Desarrollador Tecnológico</option>
+          <option value="infrastructure" >Proveedor de Infraestructura</option>
+          <option value="digital" >Plataforma Digital</option>
+          <option value="other" >Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country" >País</label>
+        <input type="text" id="country" name="country" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" >Correo Electrónico</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description" >¿Qué puede ofrecer o cómo le gustaría participar?</label>
+        <textarea id="description" name="description" class="form-textarea" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%" >Enviar Expresión de Interés</button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0.5rem"><span>&#9670;</span> Knowledge Ark</div>
+        <p>Una iniciativa descentralizada para preservar el conocimiento más importante de la humanidad a través de múltiples medios de almacenamiento y ubicaciones, en la Tierra y en el espacio.</p>
+      </div>
+      <div>
+        <h4>Navegar</h4>
+        <ul class="footer-links">
+          <li><a href="/es/mission/">Misión</a></li>
+          <li><a href="/es/technologies/">Tecnologías</a></li>
+          <li><a href="/es/participate/">Participar</a></li>
+          <li><a href="/es/faq/">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Conectar</h4>
+        <ul class="footer-links">
+          <li><a href="/es/contact/">Contacto</a></li>
+          <li><a href="/es/news/">Noticias</a></li>
+          <li><a href="/es/participate/#eoi-form">Expresión de Interés</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Iniciativa Knowledge Ark. No comercial, abierta, descentralizada.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

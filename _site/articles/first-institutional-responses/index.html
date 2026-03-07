@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Institutional Responses — Knowledge Ark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="section">
+  <div class="container article-content">
+    <p class="article-meta"><a href="../news.html">&larr; All News</a> &middot; March 4, 2026</p>
+    <h1>First institutional responses received across 4 continents</h1>
+
+    <p>Within days of the initial outreach, the Knowledge Ark Initiative has received its first wave of responses from institutions across Europe, Asia, South America, and Africa.</p>
+
+    <p>Responses range from confirmed interest and requests for further information to internal forwarding within organisations — a positive signal that the initiative resonates with preservation professionals worldwide.</p>
+
+    <p>Several institutions have asked for a brochure or presentation outlining the participation model, which we are now preparing. Others have asked about the governance structure and next steps — exactly the kind of engagement we hoped to catalyse.</p>
+
+    <p>The diversity of respondents — spanning national libraries, digital archive platforms, and cultural heritage bodies — confirms that the need for multi-redundant, long-term knowledge preservation is felt globally.</p>
+
+    <p>We continue to expand the outreach and will publish more details as permissions are obtained from participating institutions.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/components.js"></script>
+<script>
+  renderHeader('news');
+  renderFooter();
+  document.querySelectorAll('.nav-links a, .footer a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('../') && !href.startsWith('#')) {
+      a.setAttribute('href', '../' + href);
+    }
+  });
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

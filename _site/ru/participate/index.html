@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Ark — Preserving Humanity&#39;s Knowledge for Eternity</title>
+  <meta name="description" content="A decentralised initiative to preserve humanity&#39;s most important knowledge across multiple storage media and locations — on Earth and in space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="/ru/" class="nav-logo">
+      <img src="/assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/ru/" class="">Главная</a></li>
+      <li><a href="/ru/mission/" class="">Миссия</a></li>
+      <li><a href="/ru/technologies/" class="">Технологии</a></li>
+      <li><a href="/ru/network/" class="">Сеть</a></li>
+      <li><a href="/ru/participate/" class="active">Участвовать</a></li>
+      <li><a href="/ru/faq/" class="">Частые вопросы</a></li>
+      <li><a href="/ru/contact/" class="">Контакты</a></li>
+    </ul>
+    
+    <div class="lang-switcher">
+      <select id="lang-selector" class="lang-select" onchange="window.location.href=this.value">
+        <option value="/en/participate/" >En</option>
+        <option value="/ru/participate/" selected>Ru</option>
+        <option value="/es/participate/" >Es</option>
+        <option value="/zh/participate/" >Zh</option>
+        <option value="/ar/participate/" >Ar</option>
+      </select>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >Как принять участие</h1>
+    <p >Никаких финансовых обязательств. Никаких немедленных обязательств. Только общая вера в то, что знания должны пережить нас всех.</p>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" >Три способа участвовать</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 >Кураторский узел</h3>
+        <p ><strong>Для:</strong> Библиотек, архивов, музеев, цифровых хранилищ</p>
+        <h4 style="margin-top:1rem" >Что предоставляете вы</h4>
+        <p >Кураторский опыт и доступ к коллекциям. Вы выбираете то, что важнее всего.</p>
+        <h4 >Что получаете вы</h4>
+        <p >Ваши коллекции будут сохранены на самых долговечных носителях из когда-либо созданных. Видимость в международной сети институтов сохранения.</p>
+        <h4 >Обязательства</h4>
+        <p >Никаких финансовых. Только интерес и готовность к диалогу.</p>
+      </div>
+
+      <div class="card">
+        <h3 >Технологический партнер</h3>
+        <p ><strong>Для:</strong> Разработчиков сверхнадежных носителей информации</p>
+        <h4 style="margin-top:1rem" >Что предоставляете вы</h4>
+        <p >Технологии хранения и технический опыт. Выделение емкости для кодирования.</p>
+        <h4 >Что получаете вы</h4>
+        <p >Прямой доступ к крупнейшим мировым архивным учреждениям. Реальные сценарии использования вашей технологии.</p>
+        <h4 >Обязательства</h4>
+        <p >Техническое сотрудничество. Никаких финансовых обязательств.</p>
+      </div>
+
+      <div class="card">
+        <h3 >Инфраструктурный партнер</h3>
+        <p ><strong>Для:</strong> Космических компаний, операторов бункеров, объектов хранения</p>
+        <h4 style="margin-top:1rem" >Что предоставляете вы</h4>
+        <p >Физическое пространство и логистика для долгосрочного размещения сохраненных носителей.</p>
+        <h4 >Что получаете вы</h4>
+        <p >Участие в знаковом проекте. PR-видимость. Сеть ведущих институтов и разработчиков технологий.</p>
+        <h4 >Обязательства</h4>
+        <p >Выделение места/полезной нагрузки. Никаких финансовых обязательств.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI Form -->
+<section class="section" style="background: var(--bg-secondary)" id="eoi-form">
+  <div class="container" style="max-width:640px">
+    <h2 class="section-title" >Выражение интереса</h2>
+    <p style="text-align:center; margin-bottom:2rem;" >Простого «мы открыты для этой идеи» — это именно то, что нам нужно на данном этапе. Каждое выражение интереса укрепляет позиции всей сети.</p>
+
+    <form action="send_mail.php" method="POST" id="eoi-form">
+      <input type="hidden" name="form_type" value="eoi">
+      <div class="form-group">
+        <label for="org-name" >Название организации</label>
+        <input type="text" id="org-name" name="organization" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="org-type" >Тип</label>
+        <select id="org-type" name="type" class="form-select" required>
+          <option value="" disabled selected >Выберите тип...</option>
+          <option value="library" >Библиотека / Архив</option>
+          <option value="technology" >Разработчик технологий</option>
+          <option value="infrastructure" >Поставщик инфраструктуры</option>
+          <option value="digital" >Цифровая платформа</option>
+          <option value="other" >Другое</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country" >Страна</label>
+        <input type="text" id="country" name="country" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" >Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description" >Что вы можете предложить или как бы вы хотели участвовать?</label>
+        <textarea id="description" name="description" class="form-textarea" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%" >Отправить выражение интереса</button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0.5rem"><span>&#9670;</span> Knowledge Ark</div>
+        <p>Децентрализованная инициатива по сохранению важнейших знаний человечества на множестве носителей и в разных локациях — на Земле и в космосе.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="/ru/mission/">Миссия</a></li>
+          <li><a href="/ru/technologies/">Технологии</a></li>
+          <li><a href="/ru/participate/">Участвовать</a></li>
+          <li><a href="/ru/faq/">Частые вопросы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul class="footer-links">
+          <li><a href="/ru/contact/">Контакты</a></li>
+          <li><a href="/ru/news/">Новости</a></li>
+          <li><a href="/ru/participate/#eoi-form">Заявка на участие</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Инициатива Knowledge Ark. Некоммерческая, открытая, децентрализованная.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
