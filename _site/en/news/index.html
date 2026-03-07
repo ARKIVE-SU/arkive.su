@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
 </head>
 <body>
+<canvas id="nodes-canvas"></canvas>
 
 <header class="header">
   <nav class="nav">
@@ -65,7 +66,7 @@
 
 <section class="section">
   <div class="container" style="max-width:800px">
-    <ul class="article-list" id="news-list">
+    <div class="news-grid" id="news-list">
       
       
         
@@ -84,35 +85,38 @@
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/en/articles/test/" class="article-title">How ARKIVE Preserves Knowledge</a>
+            <article class="news-card">
+              <a href="/en/articles/test/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">How ARKIVE Preserves Knowledge</h3>
                 
               </div>
-            </li>
+            </article>
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/en/articles/glass-cube/" class="article-title">Eternity in a Glass Cube</a>
+            <article class="news-card">
+              <a href="/en/articles/glass-cube/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">Eternity in a Glass Cube</h3>
                 
               </div>
-            </li>
+            </article>
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/en/articles/40mm-miniatures/" class="article-title">The Phenomenon of the 40mm Metal Miniature: Evolution of Collectible Sculpture</a>
+            <article class="news-card">
+              <a href="/en/articles/40mm-miniatures/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">The Phenomenon of the 40mm Metal Miniature: Evolution of Collectible Sculpture</h3>
                 
-                <p class="article-excerpt">The culture of miniature sculpture in the countries of the former USSR represents a unique synthesis of military-historical reconstruction, art casting, and modern digital communities.</p>
+                <p class="news-card-excerpt">The culture of miniature sculpture in the countries of the former USSR represents a unique synthesis of military-historical reconstruction, art casting, and modern digital communities.</p>
                 
               </div>
-            </li>
+            </article>
           
         
           
@@ -120,7 +124,7 @@
           
         
       
-    </ul>
+    </div>
   </div>
 </section>
 

@@ -20,25 +20,26 @@ eleventyComputed:
 
 <section class="section">
   <div class="container" style="max-width:800px">
-    <ul class="article-list" id="news-list">
+    <div class="news-grid" id="news-list">
       {% set articles = collections.article %}
       {% if articles %}
         {% for item in articles | reverse %}
           {% if item.page.lang == localeCode %}
-            <li class="article-item">
-              <span class="article-date">{{ item.date | dateIso }}</span>
-              <div>
-                <a href="{{ item.url }}" class="article-title">{{ item.data.title }}</a>
+            <article class="news-card">
+              <a href="{{ item.url }}" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">{{ item.date | dateIso }}</span>
+                <h3 class="news-card-title">{{ item.data.title }}</h3>
                 {% if item.data.excerpt %}
-                <p class="article-excerpt">{{ item.data.excerpt }}</p>
+                <p class="news-card-excerpt">{{ item.data.excerpt }}</p>
                 {% endif %}
               </div>
-            </li>
+            </article>
           {% endif %}
         {% endfor %}
       {% else %}
-        <li><p>{{ "news.no_articles" | t(locales, localeCode) }}</p></li>
+        <p class="no-news-msg">{{ "news.no_articles" | t(locales, localeCode) }}</p>
       {% endif %}
-    </ul>
+    </div>
   </div>
 </section>

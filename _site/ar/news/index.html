@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
 </head>
 <body>
+<canvas id="nodes-canvas"></canvas>
 
 <header class="header">
   <nav class="nav">
@@ -65,7 +66,7 @@
 
 <section class="section">
   <div class="container" style="max-width:800px">
-    <ul class="article-list" id="news-list">
+    <div class="news-grid" id="news-list">
       
       
         
@@ -90,29 +91,31 @@
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/ar/articles/glass-cube/" class="article-title">الخلود في مكعب زجاجي</a>
+            <article class="news-card">
+              <a href="/ar/articles/glass-cube/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">الخلود في مكعب زجاجي</h3>
                 
               </div>
-            </li>
+            </article>
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/ar/articles/40mm-miniatures/" class="article-title">ظاهرة المنمنمات المعدنية 40 مم: تطور النحت القابل للجمع</a>
+            <article class="news-card">
+              <a href="/ar/articles/40mm-miniatures/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">ظاهرة المنمنمات المعدنية 40 مم: تطور النحت القابل للجمع</h3>
                 
-                <p class="article-excerpt">تمثل ثقافة النحت المصغر في دول الاتحاد السوفيتي السابق توليفة فريدة من إعادة البناء التاريخي العسكري، والصب الفني، والمجتمعات الرقمية الحديثة.</p>
+                <p class="news-card-excerpt">تمثل ثقافة النحت المصغر في دول الاتحاد السوفيتي السابق توليفة فريدة من إعادة البناء التاريخي العسكري، والصب الفني، والمجتمعات الرقمية الحديثة.</p>
                 
               </div>
-            </li>
+            </article>
           
         
       
-    </ul>
+    </div>
   </div>
 </section>
 

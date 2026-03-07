@@ -683,40 +683,96 @@ body > * {
   font-size: 1.1rem;
 }
 
-/* --- Articles List --- */
-.article-list {
-  list-style: none;
+/* --- News Grid & Cards ("Плитка") --- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.article-item {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-color);
+.news-card {
+  position: relative;
+  background: rgba(18, 21, 28, 0.6);
+  border: 1px solid rgba(42, 46, 61, 0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
+  flex-direction: column;
 }
 
-.article-date {
+.news-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(229, 169, 61, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 20px rgba(229, 169, 61, 0.1);
+}
+
+.news-card:hover::before {
+  opacity: 1;
+}
+
+.news-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.news-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-card-date {
   font-size: 0.85rem;
-  color: var(--text-muted);
-  min-width: 100px;
-  font-variant-numeric: tabular-nums;
-}
-
-.article-title {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--text-primary);
-}
-
-.article-title:hover {
   color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.article-excerpt {
-  font-size: 0.9rem;
+.news-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  transition: color var(--transition);
+}
+
+.news-card:hover .news-card-title {
+  color: var(--accent-ice);
+}
+
+.news-card-excerpt {
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-top: 0.25rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+.no-news-msg {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  grid-column: 1 / -1;
 }
 
 /* --- Article Page --- */

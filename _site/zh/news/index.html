@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
 </head>
 <body>
+<canvas id="nodes-canvas"></canvas>
 
 <header class="header">
   <nav class="nav">
@@ -65,30 +66,32 @@
 
 <section class="section">
   <div class="container" style="max-width:800px">
-    <ul class="article-list" id="news-list">
+    <div class="news-grid" id="news-list">
       
       
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/zh/articles/glass-cube/" class="article-title">玻璃立方体里的永恒</a>
+            <article class="news-card">
+              <a href="/zh/articles/glass-cube/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">玻璃立方体里的永恒</h3>
                 
               </div>
-            </li>
+            </article>
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/zh/articles/40mm-miniatures/" class="article-title">40毫米金属微缩模型的现象：收藏雕塑的演变</a>
+            <article class="news-card">
+              <a href="/zh/articles/40mm-miniatures/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">40毫米金属微缩模型的现象：收藏雕塑的演变</h3>
                 
-                <p class="article-excerpt">前苏联国家的微缩雕塑文化代表了军事历史重建、艺术铸造和现代数字社区的独特综合。</p>
+                <p class="news-card-excerpt">前苏联国家的微缩雕塑文化代表了军事历史重建、艺术铸造和现代数字社区的独特综合。</p>
                 
               </div>
-            </li>
+            </article>
           
         
           
@@ -112,7 +115,7 @@
           
         
       
-    </ul>
+    </div>
   </div>
 </section>
 

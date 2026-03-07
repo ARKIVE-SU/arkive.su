@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
 </head>
 <body>
+<canvas id="nodes-canvas"></canvas>
 
 <header class="header">
   <nav class="nav">
@@ -65,7 +66,7 @@
 
 <section class="section">
   <div class="container" style="max-width:800px">
-    <ul class="article-list" id="news-list">
+    <div class="news-grid" id="news-list">
       
       
         
@@ -80,25 +81,27 @@
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/es/articles/glass-cube/" class="article-title">La Eternidad en un Cubo de Cristal</a>
+            <article class="news-card">
+              <a href="/es/articles/glass-cube/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">La Eternidad en un Cubo de Cristal</h3>
                 
               </div>
-            </li>
+            </article>
           
         
           
-            <li class="article-item">
-              <span class="article-date">2026-03-07</span>
-              <div>
-                <a href="/es/articles/40mm-miniatures/" class="article-title">El fenómeno de la miniatura de metal de 40 mm: La evolución de la escultura coleccionable</a>
+            <article class="news-card">
+              <a href="/es/articles/40mm-miniatures/" class="news-card-link"></a>
+              <div class="news-card-content">
+                <span class="news-card-date">2026-03-07</span>
+                <h3 class="news-card-title">El fenómeno de la miniatura de metal de 40 mm: La evolución de la escultura coleccionable</h3>
                 
-                <p class="article-excerpt">La cultura de la escultura en miniatura en los países de la antigua URSS representa una síntesis única de reconstrucción histórico-militar, fundición artística y comunidades digitales modernas.</p>
+                <p class="news-card-excerpt">La cultura de la escultura en miniatura en los países de la antigua URSS representa una síntesis única de reconstrucción histórico-militar, fundición artística y comunidades digitales modernas.</p>
                 
               </div>
-            </li>
+            </article>
           
         
           
@@ -112,7 +115,7 @@
           
         
       
-    </ul>
+    </div>
   </div>
 </section>
 
