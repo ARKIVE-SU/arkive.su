@@ -41,6 +41,11 @@
     "equation": "内容 &nbsp;+&nbsp; 永久存储介质 &nbsp;+&nbsp; 保存基础设施",
     "desc": "跨介质类型、地理位置和格式的多重冗余——模拟和数字，地球和太空。"
   },
+  "telegram": {
+    "title": "在 Telegram 上关注我们",
+    "desc": "订阅我们的频道，率先阅读所有最新新闻和文章。",
+    "btn": "加入 Telegram"
+  },
   "newsletter": {
     "title": "保持了解",
     "subtitle": "订阅以接收有关新行星资料库、技术突破和新保存馆藏的更新。",
@@ -51,6 +56,7 @@
     "about": "一项去中心化的计划，致力于在地球和太空的多个存储介质和位置上保存人类最重要的知识。",
     "navigate": "导航",
     "connect": "联系",
+    "telegram": "Telegram 频道",
     "eoi": "意向表达",
     "copyright": "Knowledge Ark 计划。非商业、开放、去中心化。"
   },

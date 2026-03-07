@@ -41,6 +41,11 @@
     "equation": "Content &nbsp;+&nbsp; Permanent Storage Media &nbsp;+&nbsp; Preservation Infrastructure",
     "desc": "Multi-redundancy across media types, geographic locations, and formats — analogue and digital, Earth and space."
   },
+  "telegram": {
+    "title": "Follow us on Telegram",
+    "desc": "Subscribe to our channel to be the first to read all the latest news and articles.",
+    "btn": "Join Telegram"
+  },
   "newsletter": {
     "title": "Stay Informed",
     "subtitle": "Subscribe to receive updates on new planetary repositories, technological breakthroughs, and newly preserved collections.",
@@ -51,6 +56,7 @@
     "about": "A decentralised initiative to preserve humanity's most important knowledge across multiple storage media and locations — on Earth and in space.",
     "navigate": "Navigate",
     "connect": "Connect",
+    "telegram": "Telegram Channel",
     "eoi": "Expression of Interest",
     "copyright": "Knowledge Ark Initiative. Non-commercial, open, decentralised."
   },

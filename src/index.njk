@@ -107,6 +107,20 @@ eleventyComputed:
   </div>
 </section>
 
+<!-- ===== TELEGRAM PROMO ===== -->
+<section class="section" style="background: var(--bg-tertiary); max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; text-align: center; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem;">
+  <div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-primary); margin-bottom: 1rem;">
+      <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-18.068 7.034C.802 10.19.789 11.238 1.9 11.666l4.246 1.341 2.27 7.05v-.002c.004.015.016.018.03.009L11.5 16.994l5.378 3.991a2.247 2.247 0 0 0 3.394-1.282l3.414-16.036a2.247 2.247 0 0 0-2.488-2.61v.001Z" fill="currentColor"></path>
+    </svg>
+    <h2 class="section-title" style="margin-bottom: 0.5rem">{{ "telegram.title" | t(locales, lang) | safe }}</h2>
+    <p style="margin-bottom: 2rem">{{ "telegram.desc" | t(locales, lang) | safe }}</p>
+    <a href="https://t.me/arkiveSU" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);">
+      {{ "telegram.btn" | t(locales, lang) | safe }}
+    </a>
+  </div>
+</section>
+
 <!-- ===== NEWSLETTER ===== -->
 <section class="section" style="background: var(--bg-secondary)">
   <div class="container" style="text-align:center">

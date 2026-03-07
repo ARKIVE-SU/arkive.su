@@ -41,6 +41,11 @@
     "equation": "Contenido &nbsp;+&nbsp; Medios de Almacenamiento Permanente &nbsp;+&nbsp; Infraestructura de Preservación",
     "desc": "Redundancia múltiple a través de tipos de medios, ubicaciones geográficas y formatos - analógicos y digitales, en la Tierra y en el espacio."
   },
+  "telegram": {
+    "title": "Síguenos en Telegram",
+    "desc": "Suscríbete a nuestro canal para ser el primero en leer las últimas noticias y artículos.",
+    "btn": "Unirse a Telegram"
+  },
   "newsletter": {
     "title": "Mantente Informado",
     "subtitle": "Suscríbete para recibir actualizaciones sobre nuevos repositorios planetarios, avances tecnológicos y colecciones recién preservadas.",
@@ -51,6 +56,7 @@
     "about": "Una iniciativa descentralizada para preservar el conocimiento más importante de la humanidad a través de múltiples medios de almacenamiento y ubicaciones, en la Tierra y en el espacio.",
     "navigate": "Navegar",
     "connect": "Conectar",
+    "telegram": "Canal de Telegram",
     "eoi": "Expresión de Interés",
     "copyright": "Iniciativa Knowledge Ark. No comercial, abierta, descentralizada."
   },
