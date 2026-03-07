@@ -65,7 +65,7 @@ eleventyComputed:
     <h2 class="section-title" >{{ "participate_page.form_title" | t(locales, lang) | safe }}</h2>
     <p style="text-align:center; margin-bottom:2rem;" >{{ "participate_page.form_desc" | t(locales, lang) | safe }}</p>
 
-    <form action="send_mail.php" method="POST" id="eoi-form">
+    <form action="https://formspree.io/f/myknzekz" method="POST" id="eoi-form">
       <input type="hidden" name="form_type" value="eoi">
       <div class="form-group">
         <label for="org-name" >{{ "participate_page.form_org" | t(locales, lang) | safe }}</label>
