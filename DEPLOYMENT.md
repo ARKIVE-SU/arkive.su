@@ -45,6 +45,38 @@ The server will download the new `_site/` folder, and the website will update in
 
 ---
 
+## 🤖 Instructions for AI Agents
+
+If you are an AI assistant managing this repository, follow these rules strictly to ensure the SSG works seamlessly:
+
+### 1. Languages and Folders
+The website supports 5 languages. All articles must be written in **Markdown** (`.md`) and placed in their respective language directories:
+- **English**: `src/en/articles/`
+- **Russian**: `src/ru/articles/`
+- **Spanish**: `src/es/articles/`
+- **Chinese**: `src/zh/articles/`
+- **Arabic**: `src/ar/articles/`
+
+*(Note: The `articles.json` files in these directories automatically apply the `article.njk` layout and the `article` tag. Do not delete them).*
+
+### 2. Markdown Frontmatter
+Every article must start with YAML frontmatter containing `title` and `date`. You can optionally add an `excerpt` for the news feed.
+```yaml
+---
+title: "The Future of Knowledge Preservation"
+date: 2026-03-08
+excerpt: "A short summary for the news feed."
+---
+```
+
+### 3. Build & Deploy Workflow for AI
+1. **Never use pure HTML** for articles unless absolutely necessary. Use standard Markdown.
+2. Put images in `src/assets/images/` and reference them as `/assets/images/filename.jpg`.
+3. To build the site on a Windows machine, use `cmd.exe /c "npm run build"` as `npm` scripts may fail in PowerShell due to execution policies.
+4. After writing new Markdown files and building, **always commit the `_site/` directory**. The production server will simply pull the pre-built `_site/` contents, bypassing the need for Node.js build steps.
+
+---
+
 ## 🛠 Troubleshooting
 
 **Q: The server says `Forbidden` or `404 Not Found` after a git pull.**

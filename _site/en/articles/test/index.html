@@ -1,4 +1,60 @@
-<p>We are thrilled to announce that articles can now be written in convenient Markdown format using the power of the Eleventy Static Site Generator!</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How ARKIVE Preserves Knowledge</title>
+  <meta name="description" content="A decentralised initiative to preserve humanity&#39;s most important knowledge across multiple storage media and locations — on Earth and in space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="/en/" class="nav-logo">
+      <img src="/assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/en/" class="">Home</a></li>
+      <li><a href="/en/mission/" class="">Mission</a></li>
+      <li><a href="/en/technologies/" class="">Technologies</a></li>
+      <li><a href="/en/network/" class="">Network</a></li>
+      <li><a href="/en/participate/" class="">Participate</a></li>
+      <li><a href="/en/faq/" class="">FAQ</a></li>
+      <li><a href="/en/contact/" class="">Contact</a></li>
+    </ul>
+    
+    <div class="lang-switcher">
+      <select id="lang-selector" class="lang-select" onchange="window.location.href=this.value">
+        <option value="/en/articles/test/" selected>En</option>
+        <option value="/ru/articles/test/" >Ru</option>
+        <option value="/es/articles/test/" >Es</option>
+        <option value="/zh/articles/test/" >Zh</option>
+        <option value="/ar/articles/test/" >Ar</option>
+      </select>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="section" style="padding-top: 150px; padding-bottom: 50px;">
+  <div class="container article-container" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-serif);">How ARKIVE Preserves Knowledge</h1>
+    
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
+        2026-03-07
+      </p>
+    
+    
+    <div class="article-content">
+      <p>We are thrilled to announce that articles can now be written in convenient Markdown format using the power of the Eleventy Static Site Generator!</p>
 <h2>Why is this necessary?</h2>
 <p>Because pasting long texts into JSON files was a <strong>complete nightmare</strong>. Now you simply drop the ChatGPT-translated text into the <code>/en/articles/</code> folder, and it automatically appears on the site with perfect SEO and localized URLs.</p>
 <ul>
@@ -6,3 +62,43 @@
 <li>Perfect for AI-driven localization workflows</li>
 <li>Zero latency: the site is fully pre-rendered to HTML for maximum speed.</li>
 </ul>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0.5rem"><span>&#9670;</span> Knowledge Ark</div>
+        <p>A decentralised initiative to preserve humanity&#39;s most important knowledge across multiple storage media and locations — on Earth and in space.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="/en/mission/">Mission</a></li>
+          <li><a href="/en/technologies/">Technologies</a></li>
+          <li><a href="/en/participate/">Participate</a></li>
+          <li><a href="/en/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="/en/contact/">Contact</a></li>
+          <li><a href="/en/news/">News</a></li>
+          <li><a href="/en/participate/#eoi-form">Expression of Interest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Knowledge Ark Initiative. Non-commercial, open, decentralised.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

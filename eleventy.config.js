@@ -24,6 +24,12 @@ module.exports = function(eleventyConfig) {
     return url.replace(/^\/[a-z]{2}\//, `/${newLang}/`);
   });
 
+  // Date ISO formatter filter
+  eleventyConfig.addFilter("dateIso", function(date) {
+    if (!date) return "";
+    return new Date(date).toISOString().split('T')[0];
+  });
+
   return {
     dir: {
       input: "src",
