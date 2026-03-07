@@ -80,7 +80,8 @@ To build for production:
 ```bash
 npm run build
 ```
-This generates the final static HTML files in the `_site/` directory, which you can deploy to any static hosting or web server.
+
+**For detailed instructions on how to push updates to the live server, please read the [Deployment Guide (DEPLOYMENT.md)](DEPLOYMENT.md).**
 
 **Forms and Email**
 The project uses `send_mail.php` to handle form submissions (contact form, newsletter, Expression of Interest). Form data is sent to `hello@arkive.su`. **Note:** For the forms to work, your server must have PHP installed and configured to send email (e.g., via `sendmail` or an SMTP relay).
