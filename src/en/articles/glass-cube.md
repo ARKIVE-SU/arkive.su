@@ -4,6 +4,7 @@ description: "The Archaeology of the Future and the Phenomenon of Laser Engravin
 author: "Knowledge Ark"
 date: 2026-03-07
 layout: "article.njk"
+image: "/assets/images/glasscube.jpg"
 ---
 
 # Eternity in a Glass Cube: The Archaeology of the Future and the Phenomenon of Laser Engraving in Optical Crystal

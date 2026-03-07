@@ -2,6 +2,7 @@
 title: "40毫米金属微缩模型的现象：收藏雕塑的演变"
 date: 2026-03-07
 excerpt: "前苏联国家的微缩雕塑文化代表了军事历史重建、艺术铸造和现代数字社区的独特综合。"
+image: "/assets/images/40mmbronz.jpg"
 ---
 
 ![40毫米青铜微缩模型](/assets/images/40mmbronz.jpg)

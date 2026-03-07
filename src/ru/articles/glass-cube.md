@@ -4,6 +4,7 @@ description: "Археология будущего и феномен лазер
 author: "Knowledge Ark"
 date: 2026-03-07
 layout: "article.njk"
+image: "/assets/images/glasscube.jpg"
 ---
 
 # Вечность в стеклянном кубе: Археология будущего и феномен лазерной гравировки в оптическом кристалле

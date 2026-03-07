@@ -2,6 +2,7 @@
 title: "The Phenomenon of the 40mm Metal Miniature: Evolution of Collectible Sculpture"
 date: 2026-03-07
 excerpt: "The culture of miniature sculpture in the countries of the former USSR represents a unique synthesis of military-historical reconstruction, art casting, and modern digital communities."
+image: "/assets/images/40mmbronz.jpg"
 ---
 
 ![40mm Bronze Miniature](/assets/images/40mmbronz.jpg)

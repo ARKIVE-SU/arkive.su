@@ -2,6 +2,7 @@
 title: "El fenómeno de la miniatura de metal de 40 mm: La evolución de la escultura coleccionable"
 date: 2026-03-07
 excerpt: "La cultura de la escultura en miniatura en los países de la antigua URSS representa una síntesis única de reconstrucción histórico-militar, fundición artística y comunidades digitales modernas."
+image: "/assets/images/40mmbronz.jpg"
 ---
 
 ![Miniatura de Bronce de 40mm](/assets/images/40mmbronz.jpg)

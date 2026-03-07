@@ -4,6 +4,7 @@ description: "未来的考古学与光学晶体激光雕刻现象。"
 author: "Knowledge Ark"
 date: 2026-03-07
 layout: "article.njk"
+image: "/assets/images/glasscube.jpg"
 ---
 
 # 玻璃立方体里的永恒：未来的考古学与光学晶体激光雕刻现象

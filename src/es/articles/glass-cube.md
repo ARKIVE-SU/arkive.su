@@ -4,6 +4,7 @@ description: "La Arqueología del Futuro y el Fenómeno del Grabado Láser en Cr
 author: "Knowledge Ark"
 date: 2026-03-07
 layout: "article.njk"
+image: "/assets/images/glasscube.jpg"
 ---
 
 # La Eternidad en un Cubo de Cristal: La Arqueología del Futuro y el Fenómeno del Grabado Láser en Cristal Óptico
