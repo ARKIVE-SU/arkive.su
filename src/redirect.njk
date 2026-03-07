@@ -1,0 +1,27 @@
+---
+permalink: "/"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/en/">
+  <script>
+    let destLang = 'en';
+    const saved = localStorage.getItem('arkive_lang');
+    if (saved) {
+      destLang = saved;
+    } else if (navigator.language) {
+      const navLang = navigator.language.slice(0, 2).toLowerCase();
+      if (['en', 'ru', 'es', 'zh', 'ar'].includes(navLang)) {
+        destLang = navLang;
+      }
+    }
+    window.location.replace('/' + destLang + '/');
+  </script>
+  <title>Redirecting...</title>
+</head>
+<body>
+  Redirecting to your preferred language...
+</body>
+</html>

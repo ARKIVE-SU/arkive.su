@@ -1,0 +1,74 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: localeCode
+permalink: "/{{ localeCode }}/network/index.html"
+layout: base.njk
+activePage: network
+eleventyComputed:
+  lang: "{{ localeCode }}"
+---
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >{{ "network_page.title" | t(locales, lang) | safe }}</h1>
+    <p >{{ "network_page.subtitle" | t(locales, lang) | safe }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Summary stats -->
+    <div class="stats" style="margin-bottom:3rem;">
+      <div class="stat-item">
+        <span class="stat-number">200+</span>
+        <span class="stat-label" >{{ "network_page.stats_institutions" | t(locales, lang) | safe }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label" >{{ "network_page.stats_categories" | t(locales, lang) | safe }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6</span>
+        <span class="stat-label" >{{ "network_page.stats_continents" | t(locales, lang) | safe }}</span>
+      </div>
+    </div>
+
+    <!-- Category overview -->
+    <h2 class="section-title" >{{ "network_page.cat_title" | t(locales, lang) | safe }}</h2>
+    <div class="grid-2" style="margin-bottom:3rem">
+      <div class="card">
+        <span class="card-badge badge-knowledge" >{{ "network_page.cat_knowledge_badge" | t(locales, lang) | safe }}</span>
+        <h3 >{{ "network_page.cat_knowledge_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "network_page.cat_knowledge_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card">
+        <span class="card-badge badge-storage" >{{ "network_page.cat_tech_badge" | t(locales, lang) | safe }}</span>
+        <h3 >{{ "network_page.cat_tech_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "network_page.cat_tech_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card">
+        <span class="card-badge badge-space" >{{ "network_page.cat_space_badge" | t(locales, lang) | safe }}</span>
+        <h3 >{{ "network_page.cat_space_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "network_page.cat_space_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card">
+        <span class="card-badge badge-digital" >{{ "network_page.cat_digital_badge" | t(locales, lang) | safe }}</span>
+        <h3 >{{ "network_page.cat_digital_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "network_page.cat_digital_desc" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <!-- Placeholder for individual member cards -->
+    <div style="text-align:center; padding:3rem; border:1px dashed var(--border-light); border-radius:8px;">
+      <h3 style="color:var(--text-muted); margin-bottom:1rem;" >{{ "network_page.placeholder_title" | t(locales, lang) | safe }}</h3>
+      <p >{{ "network_page.placeholder_desc" | t(locales, lang) | safe }}</p>
+      <a href="participate.html" class="btn btn-outline" style="margin-top:1rem;" >{{ "network_page.btn_join" | t(locales, lang) | safe }}</a>
+    </div>
+
+  </div>
+</section>
+

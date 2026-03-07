@@ -1,0 +1,121 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: localeCode
+permalink: "/{{ localeCode }}/index.html"
+layout: base.njk
+activePage: home
+eleventyComputed:
+  lang: "{{ localeCode }}"
+---
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1><span>{{ "hero.title_part1" | t(locales, lang) | safe }}</span><br><span class="gold">{{ "hero.title_part2" | t(locales, lang) | safe }}</span></h1>
+    <p class="hero-subtitle">
+      {{ "hero.subtitle" | t(locales, lang) | safe }}
+    </p>
+    <div class="btn-group">
+      <a href="/{{ lang }}/participate/" class="btn btn-primary">{{ "hero.btn_network" | t(locales, lang) | safe }}</a>
+      <a href="/{{ lang }}/mission/" class="btn btn-outline">{{ "hero.btn_mission" | t(locales, lang) | safe }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-number">200+</span>
+        <span class="stat-label">Institutions Contacted</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Continents</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Storage Technologies</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">Earth + Space</span>
+        <span class="stat-label">Redundancy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THREE PILLARS ===== -->
+<section class="section pillars">
+  <div class="container">
+    <h2 class="section-title">{{ "pillars.title" | t(locales, lang) | safe }}</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>{{ "pillars.knowledge_holders_title" | t(locales, lang) | safe }}</h3>
+        <p>{{ "pillars.knowledge_holders_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card">
+        <h3>{{ "pillars.technology_drivers_title" | t(locales, lang) | safe }}</h3>
+        <p>{{ "pillars.technology_drivers_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card">
+        <h3>{{ "pillars.infrastructure_nodes_title" | t(locales, lang) | safe }}</h3>
+        <p>{{ "pillars.infrastructure_nodes_desc" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section" style="background: var(--bg-secondary)">
+  <div class="container">
+    <h2 class="section-title">{{ "how_it_works.title" | t(locales, lang) | safe }}</h2>
+    <div class="steps">
+      <div class="step">
+        <h4>{{ "how_it_works.step1_title" | t(locales, lang) | safe }}</h4>
+        <p>{{ "how_it_works.step1_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="step">
+        <h4>{{ "how_it_works.step2_title" | t(locales, lang) | safe }}</h4>
+        <p>{{ "how_it_works.step2_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="step">
+        <h4>{{ "how_it_works.step3_title" | t(locales, lang) | safe }}</h4>
+        <p>{{ "how_it_works.step3_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="step">
+        <h4>{{ "how_it_works.step4_title" | t(locales, lang) | safe }}</h4>
+        <p>{{ "how_it_works.step4_desc" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMULA ===== -->
+<section class="section">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">{{ "formula.title" | t(locales, lang) | safe }}</h2>
+    <p style="font-size:1.3rem; color: var(--text-primary); font-family: var(--font-serif); max-width:700px; margin:0 auto 1.5rem;">
+      {{ "formula.equation" | t(locales, lang) | safe }}
+    </p>
+    <p style="max-width:600px; margin:0 auto;">
+      {{ "formula.desc" | t(locales, lang) | safe }}
+    </p>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="section" style="background: var(--bg-secondary)">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">{{ "newsletter.title" | t(locales, lang) | safe }}</h2>
+    <p>{{ "newsletter.subtitle" | t(locales, lang) | safe }}</p>
+    <form action="/send_mail.php" method="POST" class="newsletter-form">
+      <input type="hidden" name="form_type" value="newsletter">
+      <input type="email" name="email" class="form-input" placeholder="{{ 'newsletter.placeholder' | t(locales, lang) | escape }}" required>
+      <button type="submit" class="btn btn-primary">{{ "newsletter.btn" | t(locales, lang) | safe }}</button>
+    </form>
+  </div>
+</section>

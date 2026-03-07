@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News — Knowledge Ark</title>
-  <meta name="description" content="Latest updates from the Knowledge Ark Initiative.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
+---
+pagination:
+  data: locales
+  size: 1
+  alias: localeCode
+permalink: "/{{ localeCode }}/news/index.html"
+layout: base.njk
+activePage: news
+eleventyComputed:
+  lang: "{{ localeCode }}"
+---
 
-<div id="site-header"></div>
 
 <section class="page-header">
   <div class="container">
@@ -54,31 +51,3 @@
   </div>
 </section>
 
-<div id="site-footer"></div>
-
-<script src="assets/js/components.js"></script>
-<script>renderHeader('news'); renderFooter();</script>
-<script>
-// Load articles from JSON index
-fetch('articles/index.json')
-  .then(r => r.json())
-  .then(articles => {
-    const list = document.getElementById('news-list');
-    if (!list || !articles.length) return;
-    list.innerHTML = articles
-      .sort((a, b) => b.date.localeCompare(a.date))
-      .map(a => `
-        <li class="article-item">
-          <span class="article-date">${a.date}</span>
-          <div>
-            <a href="articles/${a.file}" class="article-title">${a.title}</a>
-            <p class="article-excerpt">${a.excerpt}</p>
-          </div>
-        </li>
-      `).join('');
-  })
-  .catch(() => {}); // noscript fallback handles this
-</script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>

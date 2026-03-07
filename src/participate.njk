@@ -1,0 +1,106 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: localeCode
+permalink: "/{{ localeCode }}/participate/index.html"
+layout: base.njk
+activePage: participate
+eleventyComputed:
+  lang: "{{ localeCode }}"
+---
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >{{ "participate_page.title" | t(locales, lang) | safe }}</h1>
+    <p >{{ "participate_page.subtitle" | t(locales, lang) | safe }}</p>
+  </div>
+</section>
+
+<!-- Roles -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" >{{ "participate_page.ways_title" | t(locales, lang) | safe }}</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 >{{ "participate_page.node_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "participate_page.node_for" | t(locales, lang) | safe }}</p>
+        <h4 style="margin-top:1rem" >{{ "participate_page.node_prov_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.node_prov_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.node_rec_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.node_rec_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.node_com_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.node_com_desc" | t(locales, lang) | safe }}</p>
+      </div>
+
+      <div class="card">
+        <h3 >{{ "participate_page.tech_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "participate_page.tech_for" | t(locales, lang) | safe }}</p>
+        <h4 style="margin-top:1rem" >{{ "participate_page.tech_prov_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.tech_prov_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.tech_rec_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.tech_rec_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.tech_com_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.tech_com_desc" | t(locales, lang) | safe }}</p>
+      </div>
+
+      <div class="card">
+        <h3 >{{ "participate_page.infra_title" | t(locales, lang) | safe }}</h3>
+        <p >{{ "participate_page.infra_for" | t(locales, lang) | safe }}</p>
+        <h4 style="margin-top:1rem" >{{ "participate_page.infra_prov_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.infra_prov_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.infra_rec_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.infra_rec_desc" | t(locales, lang) | safe }}</p>
+        <h4 >{{ "participate_page.infra_com_title" | t(locales, lang) | safe }}</h4>
+        <p >{{ "participate_page.infra_com_desc" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI Form -->
+<section class="section" style="background: var(--bg-secondary)" id="eoi-form">
+  <div class="container" style="max-width:640px">
+    <h2 class="section-title" >{{ "participate_page.form_title" | t(locales, lang) | safe }}</h2>
+    <p style="text-align:center; margin-bottom:2rem;" >{{ "participate_page.form_desc" | t(locales, lang) | safe }}</p>
+
+    <form action="send_mail.php" method="POST" id="eoi-form">
+      <input type="hidden" name="form_type" value="eoi">
+      <div class="form-group">
+        <label for="org-name" >{{ "participate_page.form_org" | t(locales, lang) | safe }}</label>
+        <input type="text" id="org-name" name="organization" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="org-type" >{{ "participate_page.form_type" | t(locales, lang) | safe }}</label>
+        <select id="org-type" name="type" class="form-select" required>
+          <option value="" disabled selected >{{ "participate_page.form_type_sel" | t(locales, lang) | safe }}</option>
+          <option value="library" >{{ "participate_page.form_type_opt1" | t(locales, lang) | safe }}</option>
+          <option value="technology" >{{ "participate_page.form_type_opt2" | t(locales, lang) | safe }}</option>
+          <option value="infrastructure" >{{ "participate_page.form_type_opt3" | t(locales, lang) | safe }}</option>
+          <option value="digital" >{{ "participate_page.form_type_opt4" | t(locales, lang) | safe }}</option>
+          <option value="other" >{{ "participate_page.form_type_opt5" | t(locales, lang) | safe }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country" >{{ "participate_page.form_country" | t(locales, lang) | safe }}</label>
+        <input type="text" id="country" name="country" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" >{{ "participate_page.form_email" | t(locales, lang) | safe }}</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description" >{{ "participate_page.form_msg" | t(locales, lang) | safe }}</label>
+        <textarea id="description" name="description" class="form-textarea" rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%" >{{ "participate_page.form_btn" | t(locales, lang) | safe }}</button>
+    </form>
+  </div>
+</section>
+

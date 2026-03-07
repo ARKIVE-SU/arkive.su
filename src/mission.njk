@@ -1,0 +1,81 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: localeCode
+permalink: "/{{ localeCode }}/mission/index.html"
+layout: base.njk
+activePage: mission
+eleventyComputed:
+  lang: "{{ localeCode }}"
+---
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >{{ "mission_page.title" | t(locales, lang) | safe }}</h1>
+    <p >{{ "mission_page.subtitle" | t(locales, lang) | safe }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+
+    <h2 >{{ "mission_page.why_now_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.why_now_p1" | t(locales, lang) | safe }}</p>
+    <p >{{ "mission_page.why_now_p2" | t(locales, lang) | safe }}</p>
+    <p >{{ "mission_page.why_now_p3" | t(locales, lang) | safe }}</p>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.what_it_is_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.what_it_is_p1" | t(locales, lang) | safe }}</p>
+    <ul style="margin:1rem 0 1.5rem 1.5rem; color: var(--text-secondary);">
+      <li >{{ "mission_page.what_it_is_li1" | t(locales, lang) | safe }}</li>
+      <li >{{ "mission_page.what_it_is_li2" | t(locales, lang) | safe }}</li>
+      <li >{{ "mission_page.what_it_is_li3" | t(locales, lang) | safe }}</li>
+    </ul>
+    <p >{{ "mission_page.what_it_is_p2" | t(locales, lang) | safe }}</p>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.redundancy_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.redundancy_p" | t(locales, lang) | safe }}</p>
+    <div class="grid-3" style="margin:1.5rem 0; gap:1.5rem">
+      <div class="card" style="text-align:center; padding:1.5rem">
+        <h4 style="color:var(--accent-gold)" >{{ "mission_page.redundancy_media_title" | t(locales, lang) | safe }}</h4>
+        <p style="font-size:0.9rem; margin:0" >{{ "mission_page.redundancy_media_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem">
+        <h4 style="color:var(--accent-gold)" >{{ "mission_page.redundancy_locations_title" | t(locales, lang) | safe }}</h4>
+        <p style="font-size:0.9rem; margin:0" >{{ "mission_page.redundancy_locations_desc" | t(locales, lang) | safe }}</p>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem">
+        <h4 style="color:var(--accent-gold)" >{{ "mission_page.redundancy_formats_title" | t(locales, lang) | safe }}</h4>
+        <p style="font-size:0.9rem; margin:0" >{{ "mission_page.redundancy_formats_desc" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.decentralised_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.decentralised_p1" | t(locales, lang) | safe }}</p>
+    <p >{{ "mission_page.decentralised_p2" | t(locales, lang) | safe }}</p>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.achievements_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.achievements_p" | t(locales, lang) | safe }}</p>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.not_title" | t(locales, lang) | safe }}</h2>
+    <ul style="margin:1rem 0 1.5rem 1.5rem; color: var(--text-secondary);">
+      <li >{{ "mission_page.not_li1" | t(locales, lang) | safe }}</li>
+      <li >{{ "mission_page.not_li2" | t(locales, lang) | safe }}</li>
+      <li >{{ "mission_page.not_li3" | t(locales, lang) | safe }}</li>
+      <li >{{ "mission_page.not_li4" | t(locales, lang) | safe }}</li>
+    </ul>
+    <p >{{ "mission_page.not_p" | t(locales, lang) | safe }}</p>
+
+    <h2 style="margin-top:3rem" >{{ "mission_page.origin_title" | t(locales, lang) | safe }}</h2>
+    <p >{{ "mission_page.origin_p1" | t(locales, lang) | safe }}</p>
+    <p >{{ "mission_page.origin_p2" | t(locales, lang) | safe }}</p>
+
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="participate.html" class="btn btn-primary" >{{ "hero.btn_network" | t(locales, lang) | safe }}</a>
+    </div>
+
+  </div>
+</section>
+

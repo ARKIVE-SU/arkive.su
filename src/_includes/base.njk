@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default("Knowledge Ark — Preserving Humanity's Knowledge for Eternity") }}</title>
+  <meta name="description" content="{{ description | default('A decentralised initiative to preserve humanity\'s most important knowledge across multiple storage media and locations — on Earth and in space.') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="/{{ lang }}/" class="nav-logo">
+      <img src="/assets/images/logo-placeholder.png" alt="Knowledge Ark Logo" id="site-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/{{ lang }}/" class="{% if activePage == 'home' %}active{% endif %}">{{ "nav.home" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/mission/" class="{% if activePage == 'mission' %}active{% endif %}">{{ "nav.mission" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/technologies/" class="{% if activePage == 'technologies' %}active{% endif %}">{{ "nav.technologies" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/network/" class="{% if activePage == 'network' %}active{% endif %}">{{ "nav.network" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/participate/" class="{% if activePage == 'participate' %}active{% endif %}">{{ "nav.participate" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/faq/" class="{% if activePage == 'faq' %}active{% endif %}">{{ "nav.faq" | t(locales, lang) }}</a></li>
+      <li><a href="/{{ lang }}/contact/" class="{% if activePage == 'contact' %}active{% endif %}">{{ "nav.contact" | t(locales, lang) }}</a></li>
+    </ul>
+    
+    <div class="lang-switcher">
+      <select id="lang-selector" class="lang-select" onchange="window.location.href=this.value">
+        <option value="{{ page.url | langUrl('en') }}" {% if lang == 'en' %}selected{% endif %}>En</option>
+        <option value="{{ page.url | langUrl('ru') }}" {% if lang == 'ru' %}selected{% endif %}>Ru</option>
+        <option value="{{ page.url | langUrl('es') }}" {% if lang == 'es' %}selected{% endif %}>Es</option>
+        <option value="{{ page.url | langUrl('zh') }}" {% if lang == 'zh' %}selected{% endif %}>Zh</option>
+        <option value="{{ page.url | langUrl('ar') }}" {% if lang == 'ar' %}selected{% endif %}>Ar</option>
+      </select>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+{{ content | safe }}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0.5rem"><span>&#9670;</span> Knowledge Ark</div>
+        <p>{{ "footer.about" | t(locales, lang) }}</p>
+      </div>
+      <div>
+        <h4>{{ "footer.navigate" | t(locales, lang) }}</h4>
+        <ul class="footer-links">
+          <li><a href="/{{ lang }}/mission/">{{ "nav.mission" | t(locales, lang) }}</a></li>
+          <li><a href="/{{ lang }}/technologies/">{{ "nav.technologies" | t(locales, lang) }}</a></li>
+          <li><a href="/{{ lang }}/participate/">{{ "nav.participate" | t(locales, lang) }}</a></li>
+          <li><a href="/{{ lang }}/faq/">{{ "nav.faq" | t(locales, lang) }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ "footer.connect" | t(locales, lang) }}</h4>
+        <ul class="footer-links">
+          <li><a href="/{{ lang }}/contact/">{{ "nav.contact" | t(locales, lang) }}</a></li>
+          <li><a href="/{{ lang }}/news/">{{ "nav.news" | t(locales, lang) }}</a></li>
+          <li><a href="/{{ lang }}/participate/#eoi-form">{{ "footer.eoi" | t(locales, lang) }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 {{ "footer.copyright" | t(locales, lang) }}
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

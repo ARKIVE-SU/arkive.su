@@ -27,62 +27,60 @@ Multi-redundancy across media types, geographic locations, and formats — analo
 ## Website Structure
 
 ```
-├── index.html              Landing page
-├── mission.html            Mission & philosophy
-├── technologies.html       Storage technologies
-├── participate.html        How to join + EOI form
-├── network.html            Network members directory
-├── faq.html                Frequently asked questions
-├── news.html               News feed (from JSON index)
-├── contact.html            Contact form & info
-├── send_mail.php           PHP script for handling form submissions
-├── articles/
-│   ├── index.json          Article index (add entry → appears in feed)
-│   ├── TEMPLATE.html       Template for new articles
-│   └── *.html              Individual articles
-└── assets/
-    ├── css/main.css        Dark cosmic theme
-    ├── locales/            JSON language dictionaries (en, ru, es, zh, ar)
-    └── js/
-        ├── components.js   Shared header & footer
-        ├── i18n.js         Client-side translation engine
-        └── main.js         Navigation, FAQ accordion, forms
+├── src/
+│   ├── index.njk               Landing redirect page
+│   ├── en/                     English version (generated physically)
+│   │   └── articles/           Markdown articles here
+│   ├── ru/                     Russian version
+│   ├── _includes/              Nunjucks templates (base, header, footer)
+│   ├── _data/                  Global data (locales JSON)
+│   └── assets/
+│       ├── css/main.css        Dark cosmic theme
+│       ├── js/main.js          Navigation, forms
+│       └── locales/            JSON language dictionaries
+├── package.json                NPM scripts
+└── eleventy.config.js          SSG Config
 ```
 
-## Internationalisation (i18n)
+## Internationalisation (i18n) & SEO
 
-The website uses a custom, lightweight, pure-JavaScript translation engine (`assets/js/i18n.js`).
-It relies on JSON dictionaries located in `assets/locales/`.
+The website was migrated to the **Eleventy (11ty)** Static Site Generator to solve SEO limitations. 
+It now physically generates language-specific HTML files for every page (`/en/index.html`, `/ru/index.html`).
+Locales are managed via JSON files in `src/assets/locales/` and injected during the build.
 
-**To add a new language or edit text:**
-1. Open the relevant file in `assets/locales/` (e.g. `en.json`).
-2. Update the values next to the keys.
-3. If adding a completely new language (e.g. `fr.json`), add it to the `SUPPORTED_LANGS` array in `i18n.js` and add an `<option>` to the `#lang-selector` in `components.js`.
+## Adding an Article (Markdown)
 
-The site automatically detects the user's browser language on their first visit, saves the preference to `localStorage`, and instantly updates the DOM via JavaScript without reloading the page. It fully supports Right-to-Left (RTL) layouts for Arabic.
-
-## Adding an Article
-
-1. Copy `articles/TEMPLATE.html` → `articles/your-article.html`
-2. Add an entry to `articles/index.json`
-3. Commit & push → article appears on the News page
+Articles are now written in pure **Markdown** and fully localized!
+1. Create a markdown file in the relevant language folder, e.g., `src/en/articles/my-post.md`
+2. Add Frontmatter at the top:
+   ```yaml
+   ---
+   title: "My New Article"
+   date: 2026-03-07
+   ---
+   ```
+3. Run `npm run build` or push to GitHub (if CI/CD is configured) to generate the page.
 
 ## Tech Stack
 
-Pure HTML/CSS/JS. No frameworks, no build step, no dependencies. Designed for:
-- Maximum simplicity and longevity
-- Easy AI-assisted editing (all files are plain text)
-- Instant deployment via `git pull`
+- **Eleventy (11ty)** Static Site Generator for pre-rendering HTML and serving Markdown.
+- Pure CSS/JS for the frontend.
+- No heavy client-side frameworks, ensuring maximum speed.
 
-## Deployment
+## Development & Deployment
 
+To run locally and preview changes live:
 ```bash
-# Clone to server
-git clone https://github.com/ARKIVE-SU/arkive.su.git /var/www/arkive.su
-
-# Update
-cd /var/www/arkive.su && git pull
+npm install
+npm start
 ```
+The site will be available at `http://localhost:8080`
+
+To build for production:
+```bash
+npm run build
+```
+This generates the final static HTML files in the `_site/` directory, which you can deploy to any static hosting or web server.
 
 **Forms and Email**
 The project uses `send_mail.php` to handle form submissions (contact form, newsletter, Expression of Interest). Form data is sent to `hello@arkive.su`. **Note:** For the forms to work, your server must have PHP installed and configured to send email (e.g., via `sendmail` or an SMTP relay).

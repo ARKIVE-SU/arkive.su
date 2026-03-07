@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<section class="section" style="padding-top: 150px; padding-bottom: 50px;">
+  <div class="container article-container" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-serif);">{{ title }}</h1>
+    {% if date %}
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
+        {{ date | date("yyyy-MM-dd") }}
+      </p>
+    {% endif %}
+    
+    <div class="article-content">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
