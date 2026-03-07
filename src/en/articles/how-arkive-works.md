@@ -2,6 +2,7 @@
 title: "How ARKIVE Preserves Knowledge"
 date: 2026-03-07
 image: "/assets/images/logo-placeholder.png"
+excerpt: "Create articles in a convenient Markdown format using the Eleventy static site generator."
 ---
 We are thrilled to announce that articles can now be written in convenient Markdown format using the power of the Eleventy Static Site Generator!
 

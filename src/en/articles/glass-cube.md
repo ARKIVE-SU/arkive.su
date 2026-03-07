@@ -1,9 +1,8 @@
 ---
 title: "Eternity in a Glass Cube"
-description: "The Archaeology of the Future and the Phenomenon of Laser Engraving in Optical Crystal."
+excerpt: "The Archaeology of the Future and the Phenomenon of Laser Engraving in Optical Crystal."
 author: "Knowledge Ark"
 date: 2026-03-07
-layout: "article.njk"
 image: "/assets/images/glasscube.jpg"
 ---
 
