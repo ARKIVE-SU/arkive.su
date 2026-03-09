@@ -24,9 +24,9 @@
   --text-secondary: #4A5056;
   --text-muted: #80878E;
   
-  /* Accents (Retaining Gold/Bronze) */
-  --accent-gold: #D4A373; /* A refined, matte bronze/gold */
-  --accent-gold-dim: #A67B51;
+  /* Accents */
+  --accent-gold: #B38654; /* Darkened bronze for better legibility on white */
+  --accent-gold-dim: #8F6940;
   --accent-blue: #0A58CA; /* Deeper corporate blue if needed */
   --accent-action: #F05A28; /* The vibrant orange button color from reference */
   --accent-action-hover: #E04815;
@@ -307,7 +307,7 @@ body > * {
 }
 
 .hero h1 .gold {
-  color: var(--accent-gold);
+  color: var(--accent-action); /* Make the main highlight energetic orange instead of gold */
 }
 
 .hero-subtitle {
@@ -965,16 +965,24 @@ button[type="submit"]:disabled {
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 70px; /* Position below header */
     left: 0;
     right: 0;
     flex-direction: column;
     background: #FFFFFF;
     padding: 1.5rem 2rem;
-    gap: 1rem;
+    gap: 1.5rem; /* Increased gap for touch targets */
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     z-index: 999;
+  }
+  
+  .nav-links img {
+    filter: invert(1); /* Ensure any icons in menu show up */
+  }
+
+  .nav-links a {
+    font-size: 1.1rem; /* Larger text for mobile */
   }
 
   .nav-links.open {
