@@ -1,7 +1,7 @@
 ---
 title: "Как ARKIVE сохраняет знания"
 date: 2026-03-07
-image: "/assets/images/logo-placeholder.png"
+image: "/assets/images/logo.png"
 excerpt: "Создание статей в удобном формате Markdown с использованием статического генератора Eleventy."
 ---
 Мы рады сообщить, что теперь статьи на сайте можно писать в удобном формате Markdown, используя возможности статического генератора Eleventy!
