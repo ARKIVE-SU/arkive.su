@@ -58,6 +58,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ============================================
+     Localized Form Messages
+     ============================================ */
+  const pageLang = document.documentElement.lang || 'en';
+  let formMessages = null;
+
+  // Load locale JSON for the current page language
+  fetch(`/assets/locales/${pageLang}.json`)
+    .then(r => r.json())
+    .then(data => { formMessages = data.form_status || null; })
+    .catch(() => { formMessages = null; });
+
+  // Fallback messages (English)
+  const fallback = {
+    success_message: '✓ Message sent successfully!',
+    success_newsletter: '✓ Subscribed successfully!',
+    success_eoi: '✓ Expression of interest received!',
+    error_generic: 'Something went wrong. Please try again.',
+    error_network: 'Network error. Please check your connection.'
+  };
+
+  function getMsg(key) {
+    return (formMessages && formMessages[key]) || fallback[key] || key;
+  }
+
+  /* ============================================
      Unified Form Submission via AJAX
      ============================================ */
   function submitForm(form, formType) {
@@ -88,13 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const msg = document.createElement('div');
       if (ok && data.ok) {
         msg.className = 'form-status form-success';
-        msg.textContent = formType === 'newsletter'
-          ? '✓ Subscribed successfully!'
-          : '✓ Message sent successfully!';
+        if (formType === 'newsletter') {
+          msg.textContent = getMsg('success_newsletter');
+        } else if (formType === 'eoi') {
+          msg.textContent = getMsg('success_eoi');
+        } else {
+          msg.textContent = getMsg('success_message');
+        }
         form.reset();
       } else {
         msg.className = 'form-status form-error';
-        msg.textContent = data.error || 'Something went wrong. Please try again.';
+        msg.textContent = data.error || getMsg('error_generic');
       }
       form.appendChild(msg);
       setTimeout(() => msg.classList.add('visible'), 10);
@@ -102,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(() => {
       const msg = document.createElement('div');
       msg.className = 'form-status form-error';
-      msg.textContent = 'Network error. Please check your connection and try again.';
+      msg.textContent = getMsg('error_network');
       form.appendChild(msg);
       setTimeout(() => msg.classList.add('visible'), 10);
     })

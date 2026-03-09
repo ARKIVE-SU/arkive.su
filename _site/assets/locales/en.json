@@ -243,5 +243,12 @@
     "news_text": "Stay updated on the initiative's progress.",
     "news_placeholder": "your@email.com",
     "news_btn": "Subscribe"
+  },
+  "form_status": {
+    "success_message": "✓ Your message has been sent successfully. We will get back to you soon.",
+    "success_newsletter": "✓ You have been subscribed. Welcome aboard!",
+    "success_eoi": "✓ Your expression of interest has been received. Thank you for joining the network!",
+    "error_generic": "Something went wrong. Please try again or email us at hello@arkive.su",
+    "error_network": "Connection error. Please check your internet and try again."
   }
 }

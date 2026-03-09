@@ -243,5 +243,12 @@
     "news_text": "随时了解倡议的最新进展。",
     "news_placeholder": "您的@email.com",
     "news_btn": "订阅"
+  },
+  "form_status": {
+    "success_message": "✓ 您的消息已成功发送。我们会尽快与您联系。",
+    "success_newsletter": "✓ 订阅成功。欢迎加入！",
+    "success_eoi": "✓ 您的合作意向已收到。感谢您加入我们的网络！",
+    "error_generic": "出了点问题。请重试或发邮件至 hello@arkive.su",
+    "error_network": "连接错误。请检查您的网络连接并重试。"
   }
 }

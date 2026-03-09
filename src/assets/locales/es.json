@@ -243,5 +243,12 @@
     "news_text": "Manténgase actualizado sobre el progreso de la iniciativa.",
     "news_placeholder": "su@email.com",
     "news_btn": "Suscribirse"
+  },
+  "form_status": {
+    "success_message": "✓ Su mensaje ha sido enviado con éxito. Nos pondremos en contacto pronto.",
+    "success_newsletter": "✓ Te has suscrito. ¡Bienvenido a bordo!",
+    "success_eoi": "✓ Su expresión de interés ha sido recibida. ¡Gracias por unirse a la red!",
+    "error_generic": "Algo salió mal. Inténtelo de nuevo o escríbanos a hello@arkive.su",
+    "error_network": "Error de conexión. Compruebe su conexión a internet e inténtelo de nuevo."
   }
 }
