@@ -935,20 +935,15 @@ button[type="submit"]:disabled {
   align-items: flex-start;
 }
 
-.member-card .card-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
+.card-badge {
+  display: block;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
 }
-
-.badge-knowledge { background: rgba(96, 165, 250, 0.15); color: var(--accent-blue); }
-.badge-storage { background: rgba(212, 168, 83, 0.15); color: var(--accent-gold); }
-.badge-space { background: rgba(147, 197, 253, 0.15); color: var(--accent-ice); }
-.badge-digital { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
