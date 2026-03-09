@@ -57,37 +57,84 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* --- Newsletter form --- */
+  /* ============================================
+     Unified Form Submission via AJAX
+     ============================================ */
+  function submitForm(form, formType) {
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+
+    // Remove any previous status message
+    const oldMsg = form.querySelector('.form-status');
+    if (oldMsg) oldMsg.remove();
+
+    // Collect form data into a plain object
+    const formData = { form_type: formType };
+    new FormData(form).forEach((value, key) => {
+      if (key !== 'form_type') formData[key] = value;
+    });
+
+    // Show loading state
+    btn.disabled = true;
+    btn.innerHTML = '<span class="btn-spinner"></span>';
+
+    fetch('/api/send_mail.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(res => res.json().then(data => ({ ok: res.ok, data })))
+    .then(({ ok, data }) => {
+      const msg = document.createElement('div');
+      if (ok && data.ok) {
+        msg.className = 'form-status form-success';
+        msg.textContent = formType === 'newsletter'
+          ? '✓ Subscribed successfully!'
+          : '✓ Message sent successfully!';
+        form.reset();
+      } else {
+        msg.className = 'form-status form-error';
+        msg.textContent = data.error || 'Something went wrong. Please try again.';
+      }
+      form.appendChild(msg);
+      setTimeout(() => msg.classList.add('visible'), 10);
+    })
+    .catch(() => {
+      const msg = document.createElement('div');
+      msg.className = 'form-status form-error';
+      msg.textContent = 'Network error. Please check your connection and try again.';
+      form.appendChild(msg);
+      setTimeout(() => msg.classList.add('visible'), 10);
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    });
+  }
+
+  // Newsletter forms (homepage + contact page)
   document.querySelectorAll('.newsletter-form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = form.querySelector('input[type="email"]').value;
-      if (email) {
-        // Replace with actual endpoint later
-        alert('Thank you for subscribing! We will keep you updated.');
-        form.reset();
-      }
+      submitForm(form, 'newsletter');
     });
   });
 
-  /* --- EOI Form --- */
+  // EOI form (participate page)
   const eoiForm = document.getElementById('eoi-form');
   if (eoiForm) {
     eoiForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Replace with actual endpoint (Formspree, etc.)
-      alert('Thank you for your interest! We will be in touch.');
-      eoiForm.reset();
+      submitForm(eoiForm, 'eoi');
     });
   }
 
-  /* --- Contact form --- */
+  // Contact form
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Message sent. Thank you!');
-      contactForm.reset();
+      submitForm(contactForm, 'contact');
     });
   }
 

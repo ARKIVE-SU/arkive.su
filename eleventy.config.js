@@ -3,6 +3,7 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 module.exports = function(eleventyConfig) {
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/api");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
 
   // Enable the i18n plugin

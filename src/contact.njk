@@ -25,7 +25,7 @@ eleventyComputed:
       <!-- Contact Form -->
       <div>
         <h2 >{{ "contact_page.msg_title" | t(locales, lang) | safe }}</h2>
-        <form action="https://formspree.io/f/myknzekz" method="POST" id="contact-form" style="margin-top:1.5rem;">
+        <form action="#" method="POST" id="contact-form" style="margin-top:1.5rem;">
           <input type="hidden" name="form_type" value="contact">
           <div class="form-group">
             <label for="contact-name" >{{ "contact_page.form_name" | t(locales, lang) | safe }}</label>
@@ -59,7 +59,7 @@ eleventyComputed:
 
           <h4 style="color:var(--accent-gold); margin-top:2rem; margin-bottom:0.5rem;" >{{ "contact_page.news_title" | t(locales, lang) | safe }}</h4>
           <p >{{ "contact_page.news_text" | t(locales, lang) | safe }}</p>
-          <form action="https://formspree.io/f/myknzekz" method="POST" class="newsletter-form" style="margin-top:1rem; max-width:100%;">
+          <form action="#" method="POST" class="newsletter-form" style="margin-top:1rem; max-width:100%;">
             <input type="hidden" name="form_type" value="newsletter">
             <input type="email" name="email" class="form-input" placeholder="{{ 'contact_page.news_placeholder' | t(locales, lang) | escape }}"  required>
             <button type="submit" class="btn btn-primary" >{{ "contact_page.news_btn" | t(locales, lang) | safe }}</button>
