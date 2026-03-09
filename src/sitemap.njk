@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {%- for page in collections.all %}
+  {%- if page.url and page.url != "/api/send_mail.php" and not page.url.startsWith("/articles/") %}
+  <url>
+    <loc>https://arkive.su{{ page.url }}</loc>
+    <lastmod>{{ page.date | dateIso }}</lastmod>
+    {%- set basePath = page.url | replace(r/^\/[a-z]{2}\//, "/") %}
+    {%- for lang in ["en", "ru", "es", "zh", "ar"] %}
+    <xhtml:link rel="alternate" hreflang="{{ lang }}" href="https://arkive.su/{{ lang }}{{ basePath }}"/>
+    {%- endfor %}
+  </url>
+  {%- endif %}
+  {%- endfor %}
+</urlset>

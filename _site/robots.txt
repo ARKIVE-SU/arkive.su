@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arkive.su/sitemap.xml
+
+# IndexNow
+# Key file: https://arkive.su/indexnow-key.txt
