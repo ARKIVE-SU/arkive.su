@@ -25,8 +25,13 @@ eleventyComputed:
       {% if articles %}
         {% for item in articles | reverse %}
           {% if item.page.lang == localeCode %}
-            <article class="news-card" {% if item.data.image %}style="background-image: linear-gradient(to top, rgba(14, 16, 21, 0.95) 0%, rgba(14, 16, 21, 0.75) 50%, rgba(14, 16, 21, 0.5) 100%), url('{{ item.data.image }}'); background-size: cover; background-position: center;"{% endif %}>
+            <article class="news-card">
               <a href="{{ item.url }}" class="news-card-link"></a>
+              {% if item.data.image %}
+              <div class="news-card-image-wrap">
+                <div class="news-card-image" style="background-image: url('{{ item.data.image }}');"></div>
+              </div>
+              {% endif %}
               <div class="news-card-content">
                 <span class="news-card-date">{{ item.date | dateIso }}</span>
                 <h3 class="news-card-title">{{ item.data.title }}</h3>
