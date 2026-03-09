@@ -64,6 +64,61 @@ eleventyComputed:
     </div>
 
     <div class="faq-item">
+
+
+<section class="page-header">
+  <div class="container">
+    <h1 >{{ "faq_page.title" | t(locales, lang) | safe }}</h1>
+    <p >{{ "faq_page.subtitle" | t(locales, lang) | safe }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q1" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a1" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q2" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a2" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q3" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a3" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q4" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a4" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q5" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a5" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" >{{ "faq_page.q6" | t(locales, lang) | safe }}</div>
+      <div class="faq-answer">
+        <p >{{ "faq_page.a6" | t(locales, lang) | safe }}</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
       <div class="faq-question" >{{ "faq_page.q7" | t(locales, lang) | safe }}</div>
       <div class="faq-answer">
         <p >{{ "faq_page.a7" | t(locales, lang) | safe }}</p>
@@ -72,9 +127,8 @@ eleventyComputed:
 
     <div style="text-align:center; margin-top:3rem;">
       <p style="color: var(--text-muted); margin-bottom:1rem;" >{{ "faq_page.contact_p" | t(locales, lang) | safe }}</p>
-      <a href="contact.html" class="btn btn-outline" >{{ "faq_page.btn_contact" | t(locales, lang) | safe }}</a>
+      <a href="/{{ lang }}/contact/" class="btn btn-outline" >{{ "faq_page.btn_contact" | t(locales, lang) | safe }}</a>
     </div>
 
   </div>
 </section>
-

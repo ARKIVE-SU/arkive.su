@@ -30,19 +30,19 @@ eleventyComputed:
     <div class="stats">
       <div class="stat-item">
         <span class="stat-number">200+</span>
-        <span class="stat-label">Institutions Contacted</span>
+        <span class="stat-label">{{ "stats.institutions" | t(locales, lang) | safe }}</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">6</span>
-        <span class="stat-label">Continents</span>
+        <span class="stat-label">{{ "stats.continents" | t(locales, lang) | safe }}</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">3</span>
-        <span class="stat-label">Storage Technologies</span>
+        <span class="stat-label">{{ "stats.tech" | t(locales, lang) | safe }}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">Earth + Space</span>
-        <span class="stat-label">Redundancy</span>
+        <span class="stat-number">{{ "stats.earth_space" | t(locales, lang) | safe }}</span>
+        <span class="stat-label">{{ "stats.redundancy" | t(locales, lang) | safe }}</span>
       </div>
     </div>
   </div>

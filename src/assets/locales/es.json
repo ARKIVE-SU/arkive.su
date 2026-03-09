@@ -250,5 +250,22 @@
     "success_eoi": "✓ Su expresión de interés ha sido recibida. ¡Gracias por unirse a la red!",
     "error_generic": "Algo salió mal. Inténtelo de nuevo o escríbanos a hello@arkive.su",
     "error_network": "Error de conexión. Compruebe su conexión a internet e inténtelo de nuevo."
+  },
+  "stats": {
+    "institutions": "Instituciones Contactadas",
+    "continents": "Continentes",
+    "tech": "Tecnologías de Almacenamiento",
+    "redundancy": "Redundancia",
+    "earth_space": "Tierra + Espacio"
+  },
+  "news_page": {
+    "title_main": "Noticias y Actualizaciones",
+    "subtitle": "Siga el progreso de la Iniciativa Arca del Conocimiento."
+  },
+  "network_stats": {
+    "l": "12 Bibliotecas Nacionales",
+    "a": "8 Archivos Digitales",
+    "t": "3 Socios Tecnológicos",
+    "i": "2 Proveedores de Infraestructura"
   }
 }

@@ -250,5 +250,22 @@
     "success_eoi": "✓ 您的合作意向已收到。感谢您加入我们的网络！",
     "error_generic": "出了点问题。请重试或发邮件至 hello@arkive.su",
     "error_network": "连接错误。请检查您的网络连接并重试。"
+  },
+  "stats": {
+    "institutions": "已联系机构",
+    "continents": "大洲",
+    "tech": "存储技术",
+    "redundancy": "冗余",
+    "earth_space": "地球 + 太空"
+  },
+  "news_page": {
+    "title_main": "新闻与更新",
+    "subtitle": "关注知识方舟倡议的进展。"
+  },
+  "network_stats": {
+    "l": "12 个国家图书馆",
+    "a": "8 个数字档案馆",
+    "t": "3 个技术合作伙伴",
+    "i": "2 个基础设施提供商"
   }
 }

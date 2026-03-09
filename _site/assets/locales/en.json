@@ -250,5 +250,22 @@
     "success_eoi": "✓ Your expression of interest has been received. Thank you for joining the network!",
     "error_generic": "Something went wrong. Please try again or email us at hello@arkive.su",
     "error_network": "Connection error. Please check your internet and try again."
+  },
+  "stats": {
+    "institutions": "Institutions Contacted",
+    "continents": "Continents",
+    "tech": "Storage Technologies",
+    "redundancy": "Redundancy",
+    "earth_space": "Earth + Space"
+  },
+  "news_page": {
+    "title_main": "News & Updates",
+    "subtitle": "Follow the progress of the Knowledge Ark Initiative."
+  },
+  "network_stats": {
+    "l": "12 National Libraries",
+    "a": "8 Digital Archives",
+    "t": "3 Technology Partners",
+    "i": "2 Infrastructure Providers"
   }
 }
