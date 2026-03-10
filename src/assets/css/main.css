@@ -24,11 +24,10 @@
   --text-secondary: #4A5056;
   --text-muted: #80878E;
   
-  /* Accents */
-  --accent-gold: #B38654; /* Darkened bronze for better legibility on white */
-  --accent-gold-dim: #8F6940;
-  --accent-blue: #0A58CA; /* Deeper corporate blue if needed */
-  --accent-action: #F05A28; /* The vibrant orange button color from reference */
+  /* Accents — unified single orange */
+  --accent-gold: #F05A28; /* Unified: same as action orange */
+  --accent-blue: #0A58CA;
+  --accent-action: #F05A28;
   --accent-action-hover: #E04815;
   
   /* Borders & Shadows */
@@ -222,6 +221,25 @@ body > * {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
+}
+
+/* --- Social Links (header) --- */
+.social-links {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--accent-action);
 }
 
 /* --- Language Switcher --- */
@@ -691,10 +709,27 @@ button[type="submit"]:disabled {
 
 /* --- Footer --- */
 .footer {
-  background: #FFFFFF;
-  border-top: 1px solid var(--border-color);
+  background: #1A1D20;
+  color: #ADB5BD;
+  border-top: none;
   padding: 4rem 0 2rem;
   margin-top: 5rem;
+}
+
+.footer a {
+  color: #ADB5BD;
+}
+
+.footer a:hover {
+  color: var(--accent-action);
+}
+
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
 }
 
 .footer-grid {
@@ -726,7 +761,7 @@ button[type="submit"]:disabled {
 }
 
 .footer-links a {
-  color: var(--text-muted);
+  color: #ADB5BD;
   font-size: 0.9rem;
 }
 
@@ -737,9 +772,9 @@ button[type="submit"]:disabled {
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: #6C757D;
 }
 
 /* --- Page Header (inner pages) --- */
@@ -957,7 +992,7 @@ button[type="submit"]:disabled {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.6rem; }
   .section { padding: 3.5rem 0; }

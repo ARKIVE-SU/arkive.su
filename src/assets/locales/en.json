@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Knowledge Ark — Preserving Humanity's Knowledge for Eternity",
+    "description": "A decentralised initiative to preserve humanity's most important knowledge across multiple storage media and locations — on Earth and in space."
+  },
   "nav": {
     "home": "Home",
     "mission": "Mission",
