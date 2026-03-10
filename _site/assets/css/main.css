@@ -709,26 +709,17 @@ button[type="submit"]:disabled {
 
 /* --- Footer --- */
 .footer {
-  background: #1A1D20;
-  color: #ADB5BD;
-  border-top: none;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-color);
   padding: 4rem 0 2rem;
   margin-top: 5rem;
-}
-
-.footer a {
-  color: #ADB5BD;
-}
-
-.footer a:hover {
-  color: var(--accent-action);
 }
 
 .footer-brand {
   font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -761,7 +752,7 @@ button[type="submit"]:disabled {
 }
 
 .footer-links a {
-  color: #ADB5BD;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -772,9 +763,9 @@ button[type="submit"]:disabled {
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--border-color);
   font-size: 0.85rem;
-  color: #6C757D;
+  color: var(--text-muted);
 }
 
 /* --- Page Header (inner pages) --- */
@@ -992,32 +983,29 @@ button[type="submit"]:disabled {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Nav hamburger triggers earlier for long-text languages (RU) */
 @media (max-width: 1100px) {
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.6rem; }
-  .section { padding: 3.5rem 0; }
-
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px; /* Position below header */
+    top: 70px;
     left: 0;
     right: 0;
     flex-direction: column;
     background: #FFFFFF;
     padding: 1.5rem 2rem;
-    gap: 1.5rem; /* Increased gap for touch targets */
+    gap: 1.5rem;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     z-index: 999;
   }
-  
+
   .nav-links img {
-    filter: invert(1); /* Ensure any icons in menu show up */
+    filter: invert(1);
   }
 
   .nav-links a {
-    font-size: 1.1rem; /* Larger text for mobile */
+    font-size: 1.1rem;
   }
 
   .nav-links.open {
@@ -1027,6 +1015,24 @@ button[type="submit"]:disabled {
   .nav-toggle {
     display: flex;
   }
+
+  .nav {
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1.25rem;
+  }
+
+  .nav-logo img {
+    height: 48px;
+    max-width: 180px;
+  }
+}
+
+/* Layout breakpoint stays at 768px */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  .section { padding: 3.5rem 0; }
 
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
@@ -1062,17 +1068,6 @@ button[type="submit"]:disabled {
 
   .card, .tech-card {
     padding: 1.5rem 1.25rem;
-  }
-
-  .nav {
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0 1.25rem;
-  }
-
-  .nav-logo img {
-    height: 48px; /* Slightly larger for light theme legibility */
-    max-width: 180px;
   }
 }
 
