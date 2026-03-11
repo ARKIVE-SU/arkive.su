@@ -1,88 +1,96 @@
-# ARKIVE.SU - Deployment Guide
+# ARKIVE.SU - Deployment & CMS Guide
 
-This document explains how to update the live website when you add new articles or change the design.
+This document explains how to update the live website, whether you are using the new visual CMS Panel or doing it manually via code.
 
-## The Short Answer
+## The Environments
 
-**Yes, you must run `npm run build` on your computer every time you add an article or change the code.** 
-The live server does not build the site; it only serves the finished HTML files from the `_site/` directory.
+1. **Local Environment** (Your PC) — Where you write content, run the CMS, and test changes.
+2. **Production Server** (arkive.su) — Linux server (ISPmanager) that ONLY serves the `_site/` directory.
 
 ---
 
-## 🚀 The Step-by-Step Workflow
+## 🛠️ Method 1: Using the CMS Panel (Recommended)
 
-When you want to add a new markdown article (e.g., from ChatGPT) or change some CSS:
+We built a local CMS panel specifically to make adding articles in 5 languages easy, without touching Terminal commands or Markdown files.
 
-### 1. Work Locally (On your computer)
-1. Open the project folder in VS Code or your terminal.
-2. Make your changes (add `.md` files to `src/ru/articles/`, edit `main.css`, etc.).
-3. *(Optional)* Run `npm start` to test how it looks in your own browser at `http://localhost:8080`.
+### Step 1: Start the CMS (On your computer)
+1. Open the `ARKIVE.SU — AG` folder in VS Code or Terminal.
+2. Run:
+   ```bash
+   npm run cms
+   ```
+3. Open `http://localhost:3000` in your web browser.
 
-### 2. Build the Site (On your computer)
-Once you are happy with the changes, you need to generate the final HTML files:
+### Step 2: Create Content
+1. Fill out the forms for all 5 languages (English, Russian, Spanish, Chinese, Arabic).
+2. The `Slug` is auto-generated based on the English title.
+3. Select an image for the article.
+
+### Step 3: Deploy
+1. Click the **"Сохранить, Собрать и Запушить"** (Save, Build & Push) button.
+2. The CMS will automatically:
+   - Save your image to `src/assets/images/`
+   - Create 5 Markdown files in their respective folders (`src/{lang}/articles/`)
+   - Run `npm run build` to generate the new HTML
+   - Commit and `git push` everything to GitHub!
+
+### Step 4: Update the Live Server
+Log into your live Linux server (via SSH or ISPmanager terminal) and run:
+```bash
+cd /var/www/www-root/data/www/arkive.su
+git pull
+```
+**That's it! The site is updated instantly.**
+
+---
+
+## 💻 Method 2: Manual Developer Workflow
+
+If you are changing CSS, JS, or Nunjucks templates, you must do it manually:
+
+### 1. Work Locally
+1. Make your code changes in the `src/` directory.
+2. Run `npm start` to preview locally at `http://localhost:8080`.
+
+### 2. Build the Site
+Generate the final HTML files:
 ```bash
 npm run build
 ```
-*This command will read all your files in `src/` and output clean, SEO-friendly HTML files into the `_site/` folder.*
+*(This creates/updates the `_site/` folder)*
 
-### 3. Push to GitHub (On your computer)
-Now you need to send both your source code AND the generated `_site/` folder to GitHub:
+### 3. Push to GitHub
 ```bash
 git add .
-git commit -m "feat: added new article"
+git commit -m "feat: updated design elements"
 git push
 ```
 
 ### 4. Update the Server
-Log into your live Linux server (via SSH or ISPmanager terminal) and pull the latest changes:
+Log into your live Linux server and pull the changes:
 ```bash
 cd /var/www/www-root/data/www/arkive.su
 git pull
 ```
 
-**That's it!**
-The server will download the new `_site/` folder, and the website will update instantly. You do **not** need to run Node.js or `npm run build` on the server itself.
-
 ---
 
 ## 🤖 Instructions for AI Agents
 
-If you are an AI assistant managing this repository, follow these rules strictly to ensure the SSG works seamlessly:
-
-### 1. Languages and Folders
-The website supports 5 languages. All articles must be written in **Markdown** (`.md`) and placed in their respective language directories:
-- **English**: `src/en/articles/`
-- **Russian**: `src/ru/articles/`
-- **Spanish**: `src/es/articles/`
-- **Chinese**: `src/zh/articles/`
-- **Arabic**: `src/ar/articles/`
-
-*(Note: The `articles.json` files in these directories automatically apply the `article.njk` layout and the `article` tag. Do not delete them).*
-
-### 2. Markdown Frontmatter
-Every article must start with YAML frontmatter containing `title` and `date`. You can optionally add an `excerpt` for the news feed.
-```yaml
----
-title: "The Future of Knowledge Preservation"
-date: 2026-03-08
-excerpt: "A short summary for the news feed."
----
-```
-
-### 3. Build & Deploy Workflow for AI
-1. **Never use pure HTML** for articles unless absolutely necessary. Use standard Markdown.
-2. Put images in `src/assets/images/` and reference them as `/assets/images/filename.jpg`.
-3. To build the site on a Windows machine, use `cmd.exe /c "npm run build"` as `npm` scripts may fail in PowerShell due to execution policies.
-4. After writing new Markdown files and building, **always commit the `_site/` directory**. The production server will simply pull the pre-built `_site/` contents, bypassing the need for Node.js build steps.
+If you are an AI assistant managing this repo:
+1. **CMS Panel:** Found in `cms/`. It uses Express and Multer. Do not alter its core functionality unless explicitly requested.
+2. **SEO:** Rely on the `base.njk` layout logic for Meta/OG tags. If adding a new page, make sure to add `seoTitle` and `seoDesc` frontmatter, and update the locale JSONs.
+3. **Articles:** Always write articles in **Markdown** (`.md`) inside `src/{lang}/articles/`. Use YAML frontmatter: `title`, `date`, `excerpt`, `image`.
+4. **Builds:** The production server only serves the pre-built `_site/` folder. Always commit the `_site/` folder after running a build locally.
+5. **Windows Issues:** In PowerShell, `npm run build` might fail. Use `cmd.exe /c "npm run build"` or the CMS api (`/api/build`) to wrap spawned processes.
 
 ---
 
-## 🛠 Troubleshooting
+## ⚠️ Troubleshooting
 
 **Q: The server says `Forbidden` or `404 Not Found` after a git pull.**
-A: Check your ISPmanager / web server settings. The "Document Root" (Корневая директория) MUST point to:
+A: Check your ISPmanager / web server settings. The "Document Root" MUST point accurately to:
 `/var/www/www-root/data/www/arkive.su/_site`
-*(Don't forget the `_site` at the end!)*
 
 **Q: Git pull on the server says `fatal: detected dubious ownership`.**
 A: Since you use the `root` user to pull files owned by `www-root`, git gets suspicious. Run this once on the server:

@@ -10,86 +10,90 @@ Every previous civilisation believed its knowledge was safe — until libraries 
 
 Multi-redundancy across media types, geographic locations, and formats — analogue and digital, Earth and space.
 
-## Three Pillars
-
-| Pillar | Description |
-|--------|-------------|
-| 📚 **Knowledge Holders** | National libraries, internet archives, museums, digital repositories |
-| 🔮 **Storage Technology** | Ceramic media (Cerabyte), 5D crystals (SPhotonix), and other ultra-durable formats |
-| 🚀 **Infrastructure** | Lunar data centres (Lonestar), deep mountain bunkers, salt mine vaults |
-
 ## Technologies
 
 - **Cerabyte** — Ceramic storage, 5,000+ year lifespan, Munich, Germany
 - **SPhotonix** — 5D crystal storage, billions of years, United Kingdom
 - **Lonestar Data Holdings** — Lunar data centres, Florida, USA
 
-## Website Structure
+---
+
+## 🏗️ Architecture & Tech Stack
+
+This project is built for **maximum speed, SEO performance, and durability**:
+- **[Eleventy (11ty)](https://11ty.dev/)** — Static Site Generator pre-rendering all HTML pages.
+- **Pure CSS/JS** — No heavy client-side frameworks, ensuring blazing fast load times.
+- **Node.js (Express)** — Used exclusively for the local CMS Panel.
+- **i18n (Internationalisation)** — 5 fully translated languages (English, Russian, Spanish, Chinese, Arabic) generated physically as static HTML files.
+
+## 🗂️ Project Structure
 
 ```
 ├── src/
 │   ├── index.njk               Landing redirect page
-│   ├── en/                     English version (generated physically)
-│   │   └── articles/           Markdown articles here
-│   ├── ru/                     Russian version
-│   ├── _includes/              Nunjucks templates (base, header, footer)
-│   ├── _data/                  Global data (locales JSON)
+│   ├── en/                     English version (Markdown articles)
+│   ├── ru/, es/, zh/, ar/      Other localized versions
+│   ├── _includes/              Nunjucks templates (base, header, article layout)
+│   ├── _data/                  Global data (locales JSON, environment variables)
 │   └── assets/
-│       ├── css/main.css        Dark cosmic theme
-│       ├── js/main.js          Navigation, forms
-│       └── locales/            JSON language dictionaries
-├── package.json                NPM scripts
-└── eleventy.config.js          SSG Config
+│       ├── css/main.css        Dark cosmic theme & styling
+│       ├── js/                 Frontend interactive scripts (components, i18n)
+│       ├── images/             Media files
+│       └── locales/            JSON language dictionaries for UI
+├── cms/
+│   ├── public/                 CMS Frontend (HTML, CSS, JS)
+│   ├── server.js               Express backend for CMS API
+│   └── ИНСТРУКЦИЯ.md           CMS User Guide (in Russian)
+├── eleventy.config.js          SSG Config
+├── package.json                NPM scripts & dependencies
+└── DEPLOYMENT.md               Guide for deploying to the live server
 ```
 
-## Internationalisation (i18n) & SEO
+## 📝 The CMS Panel (Local Content Management)
 
-The website was migrated to the **Eleventy (11ty)** Static Site Generator to solve SEO limitations. 
-It now physically generates language-specific HTML files for every page (`/en/index.html`, `/ru/index.html`).
-Locales are managed via JSON files in `src/assets/locales/` and injected during the build.
+To make adding articles and translating content easier without needing Git or coding knowledge, this project includes a **Local CMS Panel**.
 
-## Adding an Article (Markdown)
+Instead of manually creating Markdown files, you can use the CMS to write articles, upload images, and deploy the site in one click.
 
-Articles are now written in pure **Markdown** and fully localized!
-1. Create a markdown file in the relevant language folder, e.g., `src/en/articles/my-post.md`
-2. Add Frontmatter at the top:
-   ```yaml
-   ---
-   title: "My New Article"
-   date: 2026-03-07
-   ---
-   ```
-3. Run `npm run build` or push to GitHub (if CI/CD is configured) to generate the page.
+### How to use the CMS:
+1. Run `npm install` (first time only)
+2. Run `npm run cms`
+3. Open `http://localhost:3000` in your browser.
+4. Fill in the article details across all 5 languages.
+5. Upload a cover image.
+6. Click **"Save, Build & Push"** — the CMS will generate the `.md` files, run the Eleventy build process, and push to GitHub.
 
-## Tech Stack
+*(Detailed instructions are available in `cms/ИНСТРУКЦИЯ.md`)*
 
-- **Eleventy (11ty)** Static Site Generator for pre-rendering HTML and serving Markdown.
-- Pure CSS/JS for the frontend.
-- No heavy client-side frameworks, ensuring maximum speed.
+---
 
-## Development & Deployment
+## 💻 Development & Deployment
 
-To run locally and preview changes live:
+To run the site locally and preview changes live (without the CMS):
 ```bash
 npm install
 npm start
 ```
 The site will be available at `http://localhost:8080`
 
-To build for production:
+To build for production manually:
 ```bash
 npm run build
 ```
 
-**For detailed instructions on how to push updates to the live server, please read the [Deployment Guide (DEPLOYMENT.md)](DEPLOYMENT.md).**
+**For detailed instructions on how the production server works and how to pull updates, please read the [Deployment Guide (DEPLOYMENT.md)](DEPLOYMENT.md).**
 
-**Forms and Email**
-The project uses `send_mail.php` to handle form submissions (contact form, newsletter, Expression of Interest). Form data is sent to `hello@arkive.su`. **Note:** For the forms to work, your server must have PHP installed and configured to send email (e.g., via `sendmail` or an SMTP relay).
+## 🌐 SEO & Performance Features
+- Fully localized dynamic Meta Tags (`<title>`, `<meta description>`)
+- OpenGraph & Twitter Cards
+- Schema.org Structured Data (`Article`, `FAQPage`, `BreadcrumbList`)
+- Dynamic XML Sitemap (`/sitemap.xml`)
+- Zero Cumulative Layout Shift (CLS) and optimized font-loading.
 
-## Contributing
+## 🤝 Contributing
 
-This is a non-commercial, charitable initiative. If you represent a library, archive, technology developer, or infrastructure provider and want to participate — visit [arkive.su](http://arkive.su) or submit an Expression of Interest.
+This is a non-commercial, charitable initiative. If you represent a library, archive, technology developer, or infrastructure provider and want to participate — visit [arkive.su](https://arkive.su) or submit an Expression of Interest.
 
-## License
+## 📄 License
 
 This project is open source. The Knowledge Ark Initiative is non-commercial and decentralised.
