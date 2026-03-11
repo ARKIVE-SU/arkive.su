@@ -3,6 +3,24 @@
     "title": "Knowledge Ark — Preservando el conocimiento de la humanidad para la eternidad",
     "description": "Una iniciativa descentralizada para preservar los conocimientos más importantes de la humanidad en múltiples medios de almacenamiento y ubicaciones — en la Tierra y en el espacio."
   },
+  "seo": {
+    "home_title": "Knowledge Ark — Preservando el Conocimiento de la Humanidad para la Eternidad",
+    "home_desc": "Una iniciativa global que construye una biblioteca ultra duradera, multiformato y descentralizada de los logros humanos, diseñada para durar milenios.",
+    "mission_title": "Nuestra Misión — Knowledge Ark",
+    "mission_desc": "Existimos para asegurar que el conocimiento más importante de la humanidad sobreviva no por décadas, sino por milenios. Conozca nuestro enfoque descentralizado.",
+    "tech_title": "Tecnologías de Preservación — Cerabyte, SPhotonix, Lonestar",
+    "tech_desc": "Explore tecnologías de almacenamiento ultra duraderas: medios cerámicos (5.000+ años), cristales 5D (miles de millones de años) y centros de datos lunares.",
+    "network_title": "Miembros de la Red — Knowledge Ark",
+    "network_desc": "Una coalición creciente de más de 200 instituciones, tecnólogos y proveedores de infraestructura en 6 continentes comprometidos con la preservación permanente.",
+    "participate_title": "Cómo Participar — Knowledge Ark",
+    "participate_desc": "Únase a la red Knowledge Ark como nodo curatorial, socio tecnológico o de infraestructura. Sin compromiso financiero.",
+    "news_title": "Noticias y Actualizaciones — Knowledge Ark",
+    "news_desc": "Siga las últimas noticias, artículos y avances de la Iniciativa Knowledge Ark para la preservación permanente del conocimiento.",
+    "faq_title": "Preguntas Frecuentes — Knowledge Ark",
+    "faq_desc": "Preguntas frecuentes sobre Knowledge Ark: financiamiento, participación, estatus comercial y diferencias con otros esfuerzos de preservación.",
+    "contact_title": "Contacto — Knowledge Ark",
+    "contact_desc": "Póngase en contacto con Knowledge Ark. Envíe un mensaje, una expresión de interés o suscríbase a nuestro boletín."
+  },
   "nav": {
     "home": "Inicio",
     "mission": "Misión",

@@ -6,6 +6,8 @@ pagination:
 permalink: "/{{ localeCode }}/faq/index.html"
 layout: base.njk
 activePage: faq
+seoTitle: "seo.faq_title"
+seoDesc: "seo.faq_desc"
 eleventyComputed:
   lang: "{{ localeCode }}"
 ---
@@ -76,3 +78,69 @@ eleventyComputed:
 
   </div>
 </section>
+
+{# ===== FAQPage Schema ===== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q1" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a1" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q2" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a2" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q3" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a3" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q4" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a4" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q5" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a5" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q6" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a6" | t(locales, lang) }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ "faq_page.q7" | t(locales, lang) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ "faq_page.a7" | t(locales, lang) }}"
+      }
+    }
+  ]
+}
+</script>

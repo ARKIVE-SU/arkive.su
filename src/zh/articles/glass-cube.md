@@ -7,7 +7,7 @@ layout: "article.njk"
 image: "/assets/images/glasscube.jpg"
 ---
 
-# 玻璃立方体里的永恒：未来的考古学与光学晶体激光雕刻现象
+## 玻璃立方体里的永恒：未来的考古学与光学晶体激光雕刻现象
 
 ![5D玻璃立方体](/assets/images/glasscube.jpg)
 

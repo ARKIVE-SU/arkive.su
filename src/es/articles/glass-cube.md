@@ -7,7 +7,7 @@ layout: "article.njk"
 image: "/assets/images/glasscube.jpg"
 ---
 
-# La Eternidad en un Cubo de Cristal: La Arqueología del Futuro y el Fenómeno del Grabado Láser en Cristal Óptico
+## La Eternidad en un Cubo de Cristal: La Arqueología del Futuro y el Fenómeno del Grabado Láser en Cristal Óptico
 
 ![Cubo de Cristal 5D](/assets/images/glasscube.jpg)
 

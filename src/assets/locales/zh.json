@@ -3,6 +3,24 @@
     "title": "Knowledge Ark — 为永恒保存人类知识",
     "description": "一项去中心化的倡议，旨在通过多种存储介质和地点保存人类最重要的知识——在地球和太空中。"
   },
+  "seo": {
+    "home_title": "Knowledge Ark — 为永恒保存人类知识",
+    "home_desc": "一项全球计划，致力于构建一个超耐久、多格式和去中心化的人类成就图书馆，旨在保存千年。",
+    "mission_title": "我们的使命 — Knowledge Ark",
+    "mission_desc": "我们的存在是为了确保人类最重要的知识得以幸存——不是几十年，而是几千年。了解我们的去中心化保存方法。",
+    "tech_title": "保存技术 — Cerabyte、SPhotonix、Lonestar",
+    "tech_desc": "探索超耐久存储技术：陶瓷介质（5000+年）、5D晶体（数十亿年）和月球数据中心。",
+    "network_title": "网络成员 — Knowledge Ark",
+    "network_desc": "一个由6大洲200多家机构、技术人员和基础设施提供商组成的日益壮大的联盟，致力于知识的永久保存。",
+    "participate_title": "如何参与 — Knowledge Ark",
+    "participate_desc": "作为策展节点、技术合作伙伴或基础设施合作伙伴加入Knowledge Ark网络。无需财务承诺。",
+    "news_title": "新闻与更新 — Knowledge Ark",
+    "news_desc": "关注Knowledge Ark计划的最新新闻、文章和进展。",
+    "faq_title": "常见问题 — Knowledge Ark",
+    "faq_desc": "关于Knowledge Ark的常见问题：资金来源、参与方式、商业状态以及与其他保存项目的区别。",
+    "contact_title": "联系我们 — Knowledge Ark",
+    "contact_desc": "联系Knowledge Ark计划。发送消息、提交合作意向或订阅我们的通讯。"
+  },
   "nav": {
     "home": "首页",
     "mission": "使命",

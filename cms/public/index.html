@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARKIVE.SU — CMS Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="cms-header">
+    <div class="cms-header-inner">
+      <h1 class="cms-logo">🏛️ ARKIVE.SU <span class="cms-badge">CMS</span></h1>
+      <div class="cms-header-actions">
+        <button class="btn btn-ghost" id="btn-list-articles" title="Список статей">📋 Статьи</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="cms-main">
+
+    <!-- ========== ARTICLE FORM ========== -->
+    <section class="cms-card" id="section-article">
+      <h2 class="card-title">📝 Новая статья</h2>
+
+      <!-- Common fields -->
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label for="article-slug">Slug (URL-имя)</label>
+          <input type="text" id="article-slug" placeholder="my-new-article" autocomplete="off">
+          <span class="form-hint">Латиница, через дефис. Автозаполнение из EN-заголовка.</span>
+        </div>
+        <div class="form-group">
+          <label for="article-date">Дата публикации</label>
+          <input type="date" id="article-date">
+        </div>
+        <div class="form-group">
+          <label>Изображение</label>
+          <div class="image-upload-wrap">
+            <input type="file" id="article-image-file" accept="image/*" class="visually-hidden">
+            <button class="btn btn-outline btn-sm" id="btn-upload-image">📷 Загрузить</button>
+            <span class="image-path-display" id="image-path-display">— не выбрано —</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language tabs -->
+      <div class="lang-tabs" id="lang-tabs">
+        <button class="lang-tab active" data-lang="en">🇬🇧 English</button>
+        <button class="lang-tab" data-lang="ru">🇷🇺 Русский</button>
+        <button class="lang-tab" data-lang="es">🇪🇸 Español</button>
+        <button class="lang-tab" data-lang="zh">🇨🇳 中文</button>
+        <button class="lang-tab" data-lang="ar">🇸🇦 العربية</button>
+      </div>
+
+      <!-- Language panels -->
+      <div class="lang-panels" id="lang-panels">
+        <div class="lang-panel active" data-lang="en">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="article-title" data-lang="en" placeholder="Article title in English">
+            </div>
+            <div class="form-group">
+              <label>Excerpt <span class="label-hint">(для ленты новостей)</span></label>
+              <input type="text" class="article-excerpt" data-lang="en" placeholder="Short summary for news feed">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Content <span class="label-hint">(Markdown)</span></label>
+            <textarea class="article-content" data-lang="en" rows="16" placeholder="Write your article in Markdown..."></textarea>
+          </div>
+        </div>
+        <div class="lang-panel" data-lang="ru">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label>Заголовок</label>
+              <input type="text" class="article-title" data-lang="ru" placeholder="Заголовок статьи на русском">
+            </div>
+            <div class="form-group">
+              <label>Краткое описание <span class="label-hint">(для ленты новостей)</span></label>
+              <input type="text" class="article-excerpt" data-lang="ru" placeholder="Краткое описание для ленты">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Контент <span class="label-hint">(Markdown)</span></label>
+            <textarea class="article-content" data-lang="ru" rows="16" placeholder="Текст статьи на русском (Markdown)..."></textarea>
+          </div>
+        </div>
+        <div class="lang-panel" data-lang="es">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label>Título</label>
+              <input type="text" class="article-title" data-lang="es" placeholder="Título del artículo en español">
+            </div>
+            <div class="form-group">
+              <label>Extracto <span class="label-hint">(para el feed)</span></label>
+              <input type="text" class="article-excerpt" data-lang="es" placeholder="Resumen breve para el feed de noticias">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Contenido <span class="label-hint">(Markdown)</span></label>
+            <textarea class="article-content" data-lang="es" rows="16" placeholder="Escribe el artículo en Markdown..."></textarea>
+          </div>
+        </div>
+        <div class="lang-panel" data-lang="zh">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label>标题</label>
+              <input type="text" class="article-title" data-lang="zh" placeholder="中文文章标题">
+            </div>
+            <div class="form-group">
+              <label>摘要 <span class="label-hint">(新闻提要)</span></label>
+              <input type="text" class="article-excerpt" data-lang="zh" placeholder="新闻提要简短摘要">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>内容 <span class="label-hint">(Markdown)</span></label>
+            <textarea class="article-content" data-lang="zh" rows="16" placeholder="用 Markdown 编写文章..."></textarea>
+          </div>
+        </div>
+        <div class="lang-panel" data-lang="ar">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label>العنوان</label>
+              <input type="text" class="article-title" data-lang="ar" placeholder="عنوان المقال بالعربية" dir="rtl">
+            </div>
+            <div class="form-group">
+              <label>المقتطف <span class="label-hint">(للأخبار)</span></label>
+              <input type="text" class="article-excerpt" data-lang="ar" placeholder="ملخص قصير لموجز الأخبار" dir="rtl">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>المحتوى <span class="label-hint">(Markdown)</span></label>
+            <textarea class="article-content" data-lang="ar" rows="16" placeholder="...اكتب المقال بتنسيق" dir="rtl"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary btn-lg" id="btn-create-article">🟢 Создать статью</button>
+      </div>
+    </section>
+
+    <!-- ========== BUILD & DEPLOY ========== -->
+    <section class="cms-card" id="section-deploy">
+      <h2 class="card-title">🚀 Сборка и деплой</h2>
+      <div class="deploy-grid">
+        <div class="deploy-step">
+          <div class="step-number">1</div>
+          <h3>Собрать сайт</h3>
+          <p>Eleventy прочитает все .md файлы и сгенерирует готовый HTML в папку <code>_site/</code>.</p>
+          <button class="btn btn-warning" id="btn-build">🔨 Собрать сайт</button>
+        </div>
+        <div class="deploy-step">
+          <div class="step-number">2</div>
+          <h3>Запушить на GitHub</h3>
+          <p>Все изменения будут отправлены на GitHub. Потом на сервере сделайте <code>git pull</code>.</p>
+          <div class="form-group" style="margin-top: 0.75rem;">
+            <input type="text" id="commit-message" placeholder="feat: новая статья о…">
+          </div>
+          <button class="btn btn-success" id="btn-push">🚀 Запушить</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONSOLE ========== -->
+    <section class="cms-card" id="section-console">
+      <h2 class="card-title">
+        💻 Консоль
+        <button class="btn btn-ghost btn-sm" id="btn-clear-console" style="margin-left: auto;">Очистить</button>
+      </h2>
+      <pre class="console-output" id="console-output">Готово к работе. Создайте статью или соберите сайт.\n</pre>
+    </section>
+
+    <!-- ========== ARTICLES LIST MODAL ========== -->
+    <div class="modal-overlay" id="modal-articles" style="display:none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>📋 Существующие статьи</h2>
+          <button class="btn btn-ghost" id="btn-close-modal">&times;</button>
+        </div>
+        <div class="modal-body" id="articles-list-body">
+          <p>Загрузка...</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

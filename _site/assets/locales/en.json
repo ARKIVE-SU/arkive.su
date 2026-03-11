@@ -3,6 +3,24 @@
     "title": "Knowledge Ark — Preserving Humanity's Knowledge for Eternity",
     "description": "A decentralised initiative to preserve humanity's most important knowledge across multiple storage media and locations — on Earth and in space."
   },
+  "seo": {
+    "home_title": "Knowledge Ark — Preserving Humanity's Knowledge for Eternity",
+    "home_desc": "Knowledge Ark is a global initiative building an ultra-durable, multi-format, and decentralised library of human achievement designed to last millennia.",
+    "mission_title": "Our Mission — Knowledge Ark Initiative",
+    "mission_desc": "We exist to ensure that humanity's most important knowledge survives not for decades, but for millennia. Learn about our decentralised preservation approach.",
+    "tech_title": "Preservation Technologies — Cerabyte, SPhotonix, Lonestar",
+    "tech_desc": "Explore ultra-durable storage technologies: ceramic media (5,000+ years), 5D crystals (billions of years), and lunar data centres for humanity's knowledge.",
+    "network_title": "Network Members — Knowledge Ark",
+    "network_desc": "A growing coalition of 200+ institutions, technologists, and infrastructure providers committed to permanent knowledge preservation across 6 continents.",
+    "participate_title": "How to Participate — Knowledge Ark",
+    "participate_desc": "Join the Knowledge Ark network as a curatorial node, technology partner, or infrastructure provider. No financial commitment required.",
+    "news_title": "News & Updates — Knowledge Ark",
+    "news_desc": "Follow the latest news, articles, and progress of the Knowledge Ark Initiative for permanent knowledge preservation.",
+    "faq_title": "FAQ — Knowledge Ark Initiative",
+    "faq_desc": "Frequently asked questions about the Knowledge Ark Initiative: funding, participation, commercial status, and how it differs from other preservation efforts.",
+    "contact_title": "Contact Us — Knowledge Ark",
+    "contact_desc": "Get in touch with the Knowledge Ark Initiative. Send us a message, submit an expression of interest, or subscribe to our newsletter."
+  },
   "nav": {
     "home": "Home",
     "mission": "Mission",
