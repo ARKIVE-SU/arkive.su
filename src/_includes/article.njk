@@ -9,7 +9,13 @@ layout: base.njk
         {{ date | dateIso }}
       </p>
     {% endif %}
-    
+
+    {% if image %}
+      <div style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden;">
+        <img src="{{ image }}" alt="{{ title }}" style="width: 100%; height: auto; display: block;">
+      </div>
+    {% endif %}
+
     <div class="article-content">
       {{ content | safe }}
     </div>

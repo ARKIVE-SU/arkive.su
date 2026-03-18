@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/contact/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/contact/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/contact/"/>
@@ -281,17 +281,8 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/contact/"/>
   </url>
   <url>
-    <loc>https://arkive.su/</loc>
-    <lastmod>2026-03-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/"/>
-  </url>
-  <url>
     <loc>https://arkive.su/ar/faq/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/faq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/faq/"/>
@@ -300,7 +291,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/"/>
@@ -309,7 +300,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/mission/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/mission/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/mission/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/mission/"/>
@@ -318,7 +309,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/network/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/network/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/network/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/network/"/>
@@ -327,7 +318,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/news/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/news/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/news/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/news/"/>
@@ -336,7 +327,7 @@
   </url>
   <url>
     <loc>https://arkive.su/ar/participate/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/participate/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/participate/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/participate/"/>
@@ -344,8 +335,17 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/participate/"/>
   </url>
   <url>
+    <loc>https://arkive.su/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/"/>
+  </url>
+  <url>
     <loc>https://arkive.su/ar/technologies/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/technologies/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/technologies/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/technologies/"/>
