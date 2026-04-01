@@ -352,4 +352,49 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/technologies/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/technologies/"/>
   </url>
+  <url>
+    <loc>https://arkive.su/en/articles/memory-of-mankind/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/articles/memory-of-mankind/"/>
+  </url>
+  <url>
+    <loc>https://arkive.su/ru/articles/memory-of-mankind/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/articles/memory-of-mankind/"/>
+  </url>
+  <url>
+    <loc>https://arkive.su/es/articles/memory-of-mankind/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/articles/memory-of-mankind/"/>
+  </url>
+  <url>
+    <loc>https://arkive.su/zh/articles/memory-of-mankind/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/articles/memory-of-mankind/"/>
+  </url>
+  <url>
+    <loc>https://arkive.su/ar/articles/memory-of-mankind/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkive.su/en/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arkive.su/ru/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkive.su/es/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://arkive.su/zh/articles/memory-of-mankind/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arkive.su/ar/articles/memory-of-mankind/"/>
+  </url>
 </urlset>
